@@ -1,0 +1,30 @@
+.home {
+  padding: 1.61rem;
+  width: 18rem;
+  margin: 1rem;
+  border-radius: 35px;
+  border: none !important;
+
+  .home-item {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .desc {
+    transform: none;
+    box-shadow: none;
+    text-align: center;
+    padding: .3rem;
+    margin: .4rem;
+  }
+
+  .desc:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .home-btn {
+    margin-right: .4951111rem;
+  }
+
+}

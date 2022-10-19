@@ -1,0 +1,28 @@
+
+.header-app {
+  margin-left: 14%;
+  position: fixed;
+  top: 0;
+  width: 70%;
+  z-index: 1;
+  padding: 0 20px;
+  background: #ffffff;
+  background: linear-gradient(45deg, rgb(155, 138, 251), #D9D6FE);
+  box-shadow: 0 5px 14px 1px rgba(34, 60, 80, 0.16);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  .title {
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    hr {
+      margin: 0;
+    }
+
+    .bottom-title {
+      margin: 0;
+      font-size: .7rem;
+    }
+  }
+}
