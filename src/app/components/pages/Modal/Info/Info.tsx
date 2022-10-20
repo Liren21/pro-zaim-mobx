@@ -4,7 +4,7 @@ import {Button, Modal,} from 'react-bootstrap'
 import {observer} from 'mobx-react-lite'
 
 
-export default  observer(() => {
+export default observer(() => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -12,7 +12,7 @@ export default  observer(() => {
 
     return (
         <div className={'info'}>
-            <Button onClick={handleShow}  variant="outline-primary">Информация</Button>
+            <Button style={{marginRight:'3rem'}} onClick={handleShow} variant="outline-primary">Информация</Button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>

@@ -20,7 +20,9 @@ const HeaderApp = observer(() => {
                 <Navbar.Toggle aria-controls={'basic-navbar-nav'} />
                 <Navbar.Collapse className={'justify-content-end'} id={'basic-navbar-nav'}>
                     <Nav>
-
+                        <Nav.Link className={'icon'} href={'#'} >
+                            <i  title={'Подбор займа'} className="fa fa-sliders" aria-hidden="true"/>  Подбор займа
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
