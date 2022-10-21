@@ -4,6 +4,7 @@ import { Nav, Navbar } from 'react-bootstrap'
 import { observer } from 'mobx-react-lite'
 import './HeaderApp.scss'
 import coreUrls from '../../lib/core-urls'
+import routes from "../../../app/lib/routes";
 
 const HeaderApp = observer(() => {
     return (
@@ -15,8 +16,11 @@ const HeaderApp = observer(() => {
                 <Navbar.Toggle aria-controls={'basic-navbar-nav'} />
                 <Navbar.Collapse className={'justify-content-end'} id={'basic-navbar-nav'}>
                     <Nav>
-                        <Nav.Link className={'icon'} href={'#'}>
+                        <Nav.Link className={'icon'}  href={'#'+routes.LOAN_PORTFOLIO}>
                             <i title={'Подбор займа'} className="fa fa-sliders" aria-hidden="true" /> Подбор займа
+                        </Nav.Link>
+                        <Nav.Link className={'icon'}  href={'#'+routes.PERSON_DATA}>
+                            <i title={'Мои данные'} className="fa fa-address-card" aria-hidden="true"/> Мои данные
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

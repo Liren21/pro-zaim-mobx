@@ -16,20 +16,20 @@ export default observer(() => {
                         <Col key={nanoid()}>
                             <Card key={nanoid()} className={'home'}>
                                 <div key={nanoid()} className={'home-item'}>
-                                    <Col key={nanoid()} md={6}>
+                                    <Col key={nanoid()} md={5}>
                                         <Card.Img key={nanoid()} style={{borderRadius: '15px'}} variant="top" src={data.title}/>
                                         <br/>
                                         <br/>
                                     </Col>
-                                    <Col key={nanoid()} md={6}>
+                                    <Col key={nanoid()} md={7}>
                                         <Card key={nanoid()} className={'desc'}>
-                                            dasdsada
+                                            {data.loan}
                                         </Card>
                                         <Card key={nanoid()} className={'desc'}>
-                                            dasdsada
+                                            {data.sum}
                                         </Card>
                                         <Card key={nanoid()} className={'desc'}>
-                                            dasdsada
+                                            {data.bet}
                                         </Card>
                                     </Col>
                                 </div>
@@ -40,7 +40,7 @@ export default observer(() => {
                                         <Info/>
                                     </Col>
                                     <Col key={nanoid()} md={6}>
-                                        <Button style={{background: '#5925DC',float:'right'}} className={'home-btn'}>Открыть</Button>
+                                        <Button href={data.link} style={{background: '#5925DC',float:'right'}} className={'home-btn'}>Открыть</Button>
                                     </Col>
                                 </div>
                             </Card>
