@@ -1,18 +1,26 @@
-html{
+html {
   background: rgba(0, 0, 0, 0.03) !important;
+  overflow-y: scroll !important; //убирает смещение верски при появлении scrollbar
 }
-.btn{
+
+.btn {
   border-radius: 15px;
   height: 2.5rem;
 }
+
 .app {
   margin: 7rem 0;
   background: rgba(0, 0, 0, 0.03) !important;
+  .form-floating>.form-control, .form-floating>.form-control-plaintext{
+    border-radius: 18px;
+  }
+
   code {
     font-size: small;
     font-family: monospace;
   }
 }
+
 .card {
   border-radius: 28px;
   padding: 1rem;

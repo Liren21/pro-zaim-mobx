@@ -16,7 +16,9 @@ const HeaderApp = observer(() => {
                 <Navbar.Toggle aria-controls={'basic-navbar-nav'} />
                 <Navbar.Collapse className={'justify-content-end'} id={'basic-navbar-nav'}>
                     <Nav>
-                        <Nav.Link className={'icon'}  href={'#'+routes.LOAN_PORTFOLIO}>
+                        <Nav.Link className={'icon'}  href={'#'+routes.HOME}>
+                            <i className="fa fa-home" aria-hidden="true"/> Главная
+                        </Nav.Link>  <Nav.Link className={'icon'}  href={'#'+routes.LOAN_PORTFOLIO}>
                             <i title={'Подбор займа'} className="fa fa-sliders" aria-hidden="true" /> Подбор займа
                         </Nav.Link>
                         <Nav.Link className={'icon'}  href={'#'+routes.PERSON_DATA}>
