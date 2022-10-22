@@ -4,20 +4,28 @@ import {makeAutoObservable} from 'mobx'
 
 interface IElectivesStore {
 
-    showMessage: boolean
+    link: string
 
 }
 
 class ElectivesStore implements IElectivesStore {
-    showMessage = false
+    link = ''
 
     constructor() {
         makeAutoObservable(this, {}, {deep: true})
     }
 
-    setShowMessage(val:boolean){
-        this.showMessage = val
+    setLink(val: string) {
+        this.link = val
     }
+    // redirectLink() {
+    //
+    //     service.getStudentsById()
+    //         .then(() => {
+    //         })
+    //         .catch(handlerError)
+    // }
+
 
 }
 

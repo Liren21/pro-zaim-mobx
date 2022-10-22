@@ -1,6 +1,16 @@
+html {
+  ::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 0, 0, 0);
+  }
+  overflow-y: scroll;
+}
 
 .app, .modal {
   font-size: small;
+
   .icon-action {
     font-size: large;
   }
@@ -53,6 +63,7 @@
   color: #ffffff;
   border-color: #5925DC;
 }
+
 .btn-primary:hover {
   background: #5925DC;
   color: #ffffff;

@@ -52,6 +52,7 @@
     "react-dom": "^16.14.0",
     "react-overlay-loader": "0.0.3",
     "react-router-dom": "^5.2.0",
+    "react-scrollbars-custom": "^4.1.1",
     "react-select": "^3.0.4",
     "react-syntax-highlighter": "^15.4.4",
     "react-toastify": "^5.5.0",

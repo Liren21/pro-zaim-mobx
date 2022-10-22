@@ -1,7 +1,7 @@
 export const data = [
     {
         title: 'https://zet-zaim.ru/zz/joymoney.png',
-        sum: 'Сумма От 100 руб',
+        sum: 'Сумма От 3k руб',
         bet: 'Ставка: 0%',
         loan: 'Первый займ 0%',
         link: 'https://pxl.leads.su/click/027c74ca717e18a066f5cdfb5962d31a?erid=21jyGae',
