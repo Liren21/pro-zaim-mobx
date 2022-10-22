@@ -26,15 +26,15 @@ export default observer(() => {
 })
 
 const MyComponent = ({ data }: any) => (
-    <>
+    <div style={{overflowY:'scroll',height:'16rem',width:'100%' }}>
         {/* eslint-disable-next-line @typescript-eslint/no-unsafe-call */}
         {data.map((data) => (
-            <Card style={{ transform: 'none' }} key={nanoid()}>
+            <Card style={{ transform: 'none',boxShadow:'none' }} key={nanoid()}>
                 <Card.Title>{data.title}</Card.Title>
                 <Card.Body>
                     {data.body} <i className="fa fa-check-circle-o" aria-hidden="true" />
                 </Card.Body>
             </Card>
         ))}
-    </>
+    </div>
 )

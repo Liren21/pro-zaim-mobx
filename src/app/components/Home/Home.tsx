@@ -61,13 +61,11 @@ export default observer(() => {
                                     </Col>
                                     <Col key={nanoid()} xs={6} md={6}>
                                         <Button
-                                            target={'_blank'}
                                             href={data.link}
                                             style={{background: '#5925DC', float: 'right'}}
                                             className={'home-btn'}
                                             onClick={() => {
                                                 redirect(data.link)
-
                                             }}
                                         >
                                             Открыть
