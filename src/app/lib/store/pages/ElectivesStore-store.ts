@@ -5,11 +5,12 @@ import {makeAutoObservable} from 'mobx'
 interface IElectivesStore {
 
     link: string
-
+    stateOffcanvas:boolean
 }
 
 class ElectivesStore implements IElectivesStore {
     link = ''
+    stateOffcanvas = false
 
     constructor() {
         makeAutoObservable(this, {}, {deep: true})

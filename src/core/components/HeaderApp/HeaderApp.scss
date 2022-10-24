@@ -16,7 +16,7 @@
   }
   .title {
     color: rgb(255, 255, 255);
-    text-align: center;
+
 
     hr {
       margin: 0;
@@ -31,23 +31,29 @@
     }
   }
 }
-@media (min-width: 600px) and (max-width: 700px) {
+.navbar-nav{
+  color: #ffffff;
+}
+.mob-offcanvas{
+  display: none;
+}
+
+.offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl{
+  background: linear-gradient(45deg, rgb(170, 10, 255), rgb(205, 151, 239));
+}
+
+@media  (max-width: 700px) {
  .header-app{
    width: 100%;
    margin: 0!important;
  }
-}
+  .navbar-toggler{
+    display: none!important;
+  }
 
-@media (min-width: 400px) and (max-width: 599.99px) {
-  .header-app{
-    width: 100%;
-    margin: 0!important;
+  .mob-offcanvas{
+    display: contents!important;
   }
 }
 
-@media (max-width: 399.99px) {
-  .header-app{
-    width: 100%;
-    margin: 0!important;
-  }
-}
+

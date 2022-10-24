@@ -2,9 +2,11 @@ html {
   ::-webkit-scrollbar {
     width: 0 !important;
   }
+
   ::-webkit-scrollbar-track {
     background: rgba(255, 0, 0, 0);
   }
+
   overflow-y: scroll;
 }
 

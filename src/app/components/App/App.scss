@@ -1,9 +1,6 @@
-
-html {
-  background: rgba(0, 0, 0, 0.03) !important;
-}
 body{
   font-family: 'Nunito', sans-serif!important;
+  background-color: rgba(0, 0, 0, 0.03) !important;
 }
 .modal {
   overflow: hidden!important;
@@ -15,7 +12,7 @@ body{
 
 .app {
   margin: 7rem 0;
-  background: rgba(0, 0, 0, 0.03) !important;
+
 
   .form-floating > .form-control, .form-floating > .form-control-plaintext {
     border-radius: 18px;
@@ -43,7 +40,6 @@ body{
   box-shadow: 4px 9px 32px 0 rgba(155, 138, 251, 0.5);
   transform: translateY(-5px);
 }
-
 @media (min-width: 100px) and (max-width: 320px) {
 
 }
