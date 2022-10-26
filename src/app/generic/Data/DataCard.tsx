@@ -358,3 +358,23 @@ export const doc = [
             'По эл.почте - By email: help@moyzaimonline.ru',
     },
 ]
+export const bestIdea = [
+    {
+        title: 'Пусто',
+        body: 'Проносим свои извинения, за пустоту, в скором времени это исправим',
+        photo: 'https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-4788760-3988051.png',
+    },
+]
+export const updComp = [
+    {
+        title: 'Обновление от 24.10.2022',
+        body: [
+            {
+                desc: 'Иправлен баг с открытием описания',
+            },
+            {
+                desc: 'Добавлена новая кнопка "Выгодные предложения"',
+            },
+        ],
+    },
+]

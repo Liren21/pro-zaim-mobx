@@ -11,12 +11,12 @@ export default observer(() => {
     const handleShow = () => setShow(true)
 
     return (
-        <div  className={'info'}>
-            <Button style={{float:"left"}} onClick={handleShow} variant="outline-primary">
+        <div className={'info'}>
+            <Button style={{ float: 'left' }} onClick={handleShow} variant="outline-primary">
                 Информация
             </Button>
 
-            <Modal  centered show={show} onHide={handleClose}>
+            <Modal centered show={show} onHide={handleClose}>
                 <Modal.Body>
                     <InfoCard />
                     <br />

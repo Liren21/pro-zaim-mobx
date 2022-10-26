@@ -1,23 +1,30 @@
-import {makeAutoObservable} from 'mobx'
-
-
+import { makeAutoObservable } from 'mobx'
 
 interface IElectivesStore {
-
     link: string
-    stateOffcanvas:boolean
+    stateOffcanvas: boolean
+    stateToastHome: boolean
+    messageToastHome: string
 }
 
 class ElectivesStore implements IElectivesStore {
     link = ''
+    messageToastHome = ''
     stateOffcanvas = false
+    stateToastHome = false
 
     constructor() {
-        makeAutoObservable(this, {}, {deep: true})
+        makeAutoObservable(this, {}, { deep: true })
     }
 
     setLink(val: string) {
         this.link = val
+    }
+    setMessageToastHome(val: string) {
+        this.messageToastHome = val
+    }
+    setStateToastHome(val: boolean) {
+        this.stateToastHome = val
     }
     // redirectLink() {
     //
@@ -26,8 +33,6 @@ class ElectivesStore implements IElectivesStore {
     //         })
     //         .catch(handlerError)
     // }
-
-
 }
 
 export default new ElectivesStore()
