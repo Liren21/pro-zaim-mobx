@@ -1,5 +1,3 @@
-
-
 import './LoaderOverlay.scss'
 import 'react-overlay-loader/styles.css'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment

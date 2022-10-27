@@ -8,6 +8,7 @@ import { nanoid } from 'nanoid'
 import { CSSTransition } from 'react-transition-group'
 import electivesStore from '../../lib/store/pages/ElectivesStore-store'
 import ToastCustom from '../../generic/ToastCustom/ToastCustom'
+import ModalLoader from '../../generic/ModalLoader/ModalLoader'
 
 export default observer(() => {
     const [showMessage, setShowMessage] = useState(false)
@@ -17,10 +18,12 @@ export default observer(() => {
     }
     useEffect(() => {
         setShowMessage(true)
+        electivesStore.setStateLoader(false)
     }, [])
     return (
         <CSSTransition in={showMessage} nodeRef={nodeRef} timeout={300} classNames="alert" unmountOnExit>
             <div ref={nodeRef} style={{ display: 'inline-block' }}>
+                <ModalLoader />
                 <ToastCustom />
                 {data.map((data) => (
                     <Row key={nanoid()} style={{ display: 'inline-block' }}>
@@ -62,6 +65,7 @@ export default observer(() => {
                                             className={'home-btn'}
                                             onClick={() => {
                                                 redirect(data.link)
+                                                electivesStore.setStateLoader(true)
                                             }}
                                         >
                                             Открыть

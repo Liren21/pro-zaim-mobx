@@ -3,6 +3,7 @@ import { makeAutoObservable } from 'mobx'
 interface IElectivesStore {
     link: string
     stateOffcanvas: boolean
+    stateLoader: boolean
     stateToastHome: boolean
     messageToastHome: string
 }
@@ -11,6 +12,7 @@ class ElectivesStore implements IElectivesStore {
     link = ''
     messageToastHome = ''
     stateOffcanvas = false
+    stateLoader = false
     stateToastHome = false
 
     constructor() {
@@ -25,6 +27,9 @@ class ElectivesStore implements IElectivesStore {
     }
     setStateToastHome(val: boolean) {
         this.stateToastHome = val
+    }
+    setStateLoader(val: boolean) {
+        this.stateLoader = val
     }
     // redirectLink() {
     //

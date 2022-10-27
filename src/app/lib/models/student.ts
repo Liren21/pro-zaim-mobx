@@ -1,4 +1,4 @@
-import {Global, IGlobal} from '../../../core/lib/models/global'
+import { Global, IGlobal } from '../../../core/lib/models/global'
 
 export interface IStudent extends IGlobal {
     groupNumber: string
@@ -40,5 +40,4 @@ export class Student extends Global<IStudent, Student> implements IStudent {
     constructor(obj: IStudent) {
         super(obj)
     }
-
 }
