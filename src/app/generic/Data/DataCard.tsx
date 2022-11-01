@@ -5,7 +5,7 @@ export const data = [
         bet: 'Ставка: 0%',
         loan: 'Срок: до 30 дней',
         link: 'https://pxl.leads.su/click/e5320d12882f2b91310f9b702071f6b7?erid=21jyGZB',
-        min: 3000
+        min: 3000,
     },
     {
         title: 'https://zet-zaim.ru/zz/joymoney.png',
@@ -20,7 +20,7 @@ export const data = [
         bet: 'Ставка: 0%',
         loan: 'Срок: от 65 дней',
         link: 'https://pxl.leads.su/click/df8646af6896395109a59b6ecb157a7e?erid=21jyGZD',
-        min: 2000
+        min: 2000,
     },
     {
         title: 'https://zayme.ru/wp-content/uploads/2018/08/payps.png',
@@ -35,7 +35,7 @@ export const data = [
         bet: 'Ставка: 0%',
         loan: 'Срок: от 5 дней',
         link: 'https://pxl.leads.su/click/15b198084a54bb67aa272e2ec5159294?erid=21jyGZf',
-        min: 1000
+        min: 1000,
     },
     {
         title: 'https://hh.ru/employer-logo/2292673.jpeg',
@@ -378,11 +378,33 @@ export const doc = [
 export const bestIdea = [
     {
         title: 'Пусто',
-        body: 'Проносим свои извинения, за пустоту, в скором времени это исправим',
+        body: 'Приносим свои извинения, за пустоту, в скором времени это исправим',
         photo: 'https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-4788760-3988051.png',
     },
 ]
 export const updComp = [
+    {
+        title: 'Обновление от 01.11.2022',
+        body: [
+            {
+                desc: 'Обновлена старница "подбор займа"',
+            },
+            {
+                desc: 'Добавлена фукция подбор займа',
+            },
+        ],
+    },
+    {
+        title: 'Обновление от 29.10.2022',
+        body: [
+            {
+                desc: 'Иправлен баг statusBar',
+            },
+            {
+                desc: 'Изменен цвет statusBara в мобильной версии',
+            },
+        ],
+    },
     {
         title: 'Обновление от 24.10.2022',
         body: [
