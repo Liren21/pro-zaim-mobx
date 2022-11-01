@@ -11,8 +11,9 @@ export const data = [
         title: 'https://zet-zaim.ru/zz/joymoney.png',
         sum: 'Сумма: от 3к руб',
         bet: 'Ставка: 0%',
-        loan: 'Первый займ: до 10к',
+        loan: 'Срок: от 10 дней',
         link: 'https://pxl.leads.su/click/027c74ca717e18a066f5cdfb5962d31a?erid=21jyGae',
+        min: 3000,
     },
     {
         title: 'https://creditonline.su/wp-content/uploads/2019/01/vazhnie-momenty-creditovania.png',
@@ -28,6 +29,7 @@ export const data = [
         bet: 'Ставка: 1%',
         loan: 'Срок: от 5 дней',
         link: 'https://pxl.leads.su/click/4e83dcb065698cedfc8dd61f6268ace3?erid=21jyGZo',
+        min: 3000,
     },
     {
         title: 'data:image/png;base64,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',
@@ -43,6 +45,7 @@ export const data = [
         bet: 'Ставка: 0%',
         loan: 'Срок: от 7 дней',
         link: 'https://pxl.leads.su/click/e08bab359c68c3a518fe74d015a23102?erid=21jyGZM',
+        min: 3000,
     },
     {
         title: 'https://play-lh.googleusercontent.com/TJ11u_znD6t5zqOmVkMXEhBBn4f7zSXCYSLDWnuR8XsmtDfUbt1mLegvF-NvETG_F9uT',
@@ -76,7 +79,7 @@ export const data = [
         title: 'https://unicom24.ru/media/open/0/c/37/c377e9052a38079be52416e73e6f783f.jpg',
         sum: 'Сумма: от 3к руб',
         bet: 'Ставка: 0%',
-        loan: 'Первый займ: до 7 дней 0%',
+        loan: 'Срок: от 1 дня',
         link: 'https://pxl.leads.su/click/a0701b22e203f438073b77f2a879bbfe?erid=21jyGZn',
     },
     {
@@ -103,7 +106,7 @@ export const data = [
     {
         title: 'https://www.audit-escort.ru/upload/iblock/8ad/2.png',
         sum: 'Сумма: от 1к руб',
-        bet: 'Ставка: 0% до 7 дней на повторное',
+        bet: 'Срок: от 1 дня',
         loan: 'Первый займ: 0%',
         link: 'https://pxl.leads.su/click/7821907626e7eb2a749699798b6a4680?erid=21jyGZG',
     },
@@ -124,15 +127,15 @@ export const data = [
     {
         title: 'https://www.kreditos.ru/thumbs/200x200/08cd9c2fae368eedc20d574fadac542e.jpg',
         sum: 'Сумма: от 1к руб',
-        bet: 'Ставка: от 0.6 до 1%',
-        loan: 'Первый займ: до 20 дней 0%',
+        bet: 'Ставка: от 0.6% ',
+        loan: 'Срок: от 1 дня',
         link: 'https://pxl.leads.su/click/30c4b1cc644a966fe4e2f4c9d192734b?erid=21jyGZg',
     },
     {
         title: 'https://www.kreditos.ru/thumbs/200x200/611c81b29a153.png',
         sum: 'Сумма: от 3к руб',
         bet: 'Ставка: 1% в день ',
-        loan: 'Первый займ: 1% в день ',
+        loan: 'Срок: от 5 дней',
         link: 'https://pxl.leads.su/click/3d8df00697af1fc4c47598f4cfced8c6?erid=5UGfMxtQ',
     },
     {
@@ -144,9 +147,9 @@ export const data = [
     },
     {
         title: 'https://www.kreditos.ru/thumbs/200x200/a97ef8cd19adddedb2309d771c552bf4.jpg',
-        sum: 'Сумма: от 4к руб',
+        sum: 'Сумма: от 3к руб',
         bet: 'Ставка: 1% в дент',
-        loan: 'Первый займ: 1% в день ',
+        loan: 'Срок: от 1 дня',
         link: 'https://pxl.leads.su/click/a7d8a43ad7f7cdcd7090b184113d48e9?erid=21jyGZZ',
     },
     {

@@ -1,15 +1,13 @@
 // eslint-disable-next-line prettier/prettier
 import * as React from 'react'
-import {Nav, Navbar} from 'react-bootstrap'
-import {observer} from 'mobx-react-lite'
+import { Nav, Navbar } from 'react-bootstrap'
+import { observer } from 'mobx-react-lite'
 import './HeaderApp.scss'
 import coreUrls from '../../lib/core-urls'
-import Scrollbar from "react-scrollbars-custom";
-import OffcanvasCustom from "../../../app/generic/OffcanvasCustom/OffcanvasCustom";
+import Scrollbar from 'react-scrollbars-custom'
+import OffcanvasCustom from '../../../app/generic/OffcanvasCustom/OffcanvasCustom'
 
 const HeaderApp = observer(() => {
-
-
     return (
         <Scrollbar>
             <div className={'header-app'}>
@@ -18,12 +16,12 @@ const HeaderApp = observer(() => {
                         Pro zайм
                     </Navbar.Brand>
                     <div className={'mob-offcanvas'}>
-                        <OffcanvasCustom/>
+                        <OffcanvasCustom />
                     </div>
-                    <Navbar.Toggle aria-controls={'basic-navbar-nav'}/>
-                    <Navbar.Collapse  className={'justify-content-end'} id={'basic-navbar-nav'}>
+                    <Navbar.Toggle aria-controls={'basic-navbar-nav'} />
+                    <Navbar.Collapse className={'justify-content-end'} id={'basic-navbar-nav'}>
                         <Nav>
-                            <OffcanvasCustom/>
+                            <OffcanvasCustom />
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
