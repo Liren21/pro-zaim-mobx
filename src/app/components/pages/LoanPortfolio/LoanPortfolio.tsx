@@ -1,12 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Card, Row, Col } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import { CSSTransition } from 'react-transition-group'
 import './LoanPortfolio.scss'
 import { observer } from 'mobx-react-lite'
-import RangeCustom from '../../../generic/RangeCustom/RangeCustom'
 import electivesStore from '../../../lib/store/pages/Electives-store'
-import { nanoid } from 'nanoid'
 import ResultCard from './ResultCard/ResultCard'
+import FormControlApp from '../../../../core/components/FormControlApp/FormControlApp'
 
 export default observer(() => {
     const [showMessage, setShowMessage] = useState(false)
@@ -20,25 +19,18 @@ export default observer(() => {
     return (
         <CSSTransition in={showMessage} nodeRef={nodeRef} timeout={300} classNames="alert" unmountOnExit>
             <div ref={nodeRef}>
-                <Row>
-                    <Col style={{ display: 'inline-block' }}>
-                        <Card.Body>
-                            <br />
-                            <Card.Title>Введите сумму от</Card.Title>
-                            <RangeCustom
-                                tab={'min'}
-                                onChangeBtn={electivesStore.setMinNumRange}
-                                minRange={100}
-                                maxRange={100000}
-                                key={nanoid()}
-                            />
-                            <br />
-                            <br />
+                <Card.Body>
+                    <br />
+                    <Card.Title>Введите сумму от</Card.Title>
+                    <FormControlApp
+                        value={electivesStore.minNumRange}
+                        onChange={(val) => electivesStore.setMinNumRange(val)}
+                    />
+                    <br />
+                    <br />
 
-                            <ResultCard />
-                        </Card.Body>
-                    </Col>
-                </Row>
+                    <ResultCard />
+                </Card.Body>
             </div>
         </CSSTransition>
     )

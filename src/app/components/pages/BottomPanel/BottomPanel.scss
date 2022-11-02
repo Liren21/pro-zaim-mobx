@@ -5,11 +5,11 @@
   z-index: 1;
   padding: 20px 0;
   background: #f8f9fa;
-  display: inline-block !important;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   color: #000000 !important;
   text-align: center;
+  display: none;
 
 }
 
@@ -24,4 +24,10 @@
 }
 .fa-credit-card:before,.fa-bar-chart-o:before, .fa-bar-chart:before,.fa-heart-o:before{
   font-size: 1rem;
+}
+@media  (max-width: 767px) {
+  .bottom-panel {
+    display: inline-block!important;
+
+  }
 }

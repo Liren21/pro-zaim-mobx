@@ -141,7 +141,7 @@ export const data = [
         name: 'До зарплаты',
         img: 'https://play-lh.googleusercontent.com/TJ11u_znD6t5zqOmVkMXEhBBn4f7zSXCYSLDWnuR8XsmtDfUbt1mLegvF-NvETG_F9uT',
         link: 'https://pxl.leads.su/click/67addcb7a6eabdaa54ec6eee2f65495c?erid=5UGfMqkb',
-        body: 2000,
+        min: 2000,
         descr: [
             {
                 body: 'Сумма: от 2к руб',
@@ -164,7 +164,7 @@ export const data = [
         name: 'Cash>U',
         img: 'https://unicom24.ru/media/open/2/d/f1/df13d9af0e2d1f55fddbe6821ed70ffb.png',
         link: 'https://pxl.leads.su/click/18f1ea8ef151b29d11a46d4f8b228550?erid=21jyGZR',
-        body: 2000,
+        min: 2000,
         descr: [
             {
                 body: 'Сумма: от 3к руб',
@@ -187,7 +187,7 @@ export const data = [
         name: 'еКапуста',
         img: 'https://unicom24.ru/media/open/4/a/02/a02307dd2024d1c7863c06ff11c7c518.png',
         link: 'https://pxl.leads.su/click/7690b008ecc33789065e6431deca1757?erid=21jyGZF',
-        body: 100,
+        min: 100,
         descr: [
             {
                 body: 'Сумма: от 100 руб',
@@ -210,7 +210,7 @@ export const data = [
         name: 'Лайм-займ',
         img: 'https://unicom24.ru/media/open/7/3/20/320a2e591b6396e4b2b991b6868ecd3f.png',
         link: 'https://pxl.leads.su/click/c4511dce74024b9a3ffcea4fc1cb7bf2?erid=21jyGZc',
-        body: 2000,
+        min: 2000,
         descr: [
             {
                 body: 'Сумма: от 2к руб',
@@ -233,7 +233,7 @@ export const data = [
         name: 'ТурбоЗайм',
         img: 'https://unicom24.ru/media/open/0/c/37/c377e9052a38079be52416e73e6f783f.jpg',
         link: 'https://pxl.leads.su/click/a0701b22e203f438073b77f2a879bbfe?erid=21jyGZn',
-        body: 3000,
+        min: 3000,
         descr: [
             {
                 body: 'Сумма: от 3к руб',
@@ -256,7 +256,7 @@ export const data = [
         name: 'CREDIT7',
         img: 'https://i.otzovik.com/objects/b/1800000/1795467.png',
         link: 'https://pxl.leads.su/click/9a5fd6352eb9be32d071a04d442b4895?erid=5UGfMqbm',
-        body: 1000,
+        min: 1000,
         descr: [
             {
                 body: 'Сумма: от 1к руб',
@@ -279,7 +279,7 @@ export const data = [
         name: 'vivus.ru',
         img: 'https://zaim-on-line.ru/ol/vivis-ru.jpg',
         link: 'https://pxl.leads.su/click/71de16fed72adc65a710ef0cd7314584?erid=21jyGZY',
-        body: 3000,
+        min: 3000,
         descr: [
             {
                 body: 'Сумма: от 3к руб',
@@ -302,7 +302,7 @@ export const data = [
         name: 'Надо денег',
         img: 'https://dakakredit.com/wp-content/uploads/2021/06/file_5f3bd14c6a65e.png',
         link: 'https://pxl.leads.su/click/62c3dc50f34e01c139e61496a72570e2?erid=21jyGZa',
-        body: 1000,
+        min: 1000,
         descr: [
             {
                 body: 'Сумма: от 1к руб',
@@ -325,7 +325,7 @@ export const data = [
         name: 'БыстроДенеьги',
         img: 'https://bankiroff.ru/images/creditors/1634721372dyJgt_thumbnail_2021-10-20_35.png',
         link: 'https://pxl.leads.su/click/7821907626e7eb2a749699798b6a4680?erid=21jyGZG',
-        body: 1000,
+        min: 1000,
         descr: [
             {
                 body: 'Сумма: от 1к руб',
@@ -348,7 +348,7 @@ export const data = [
         name: 'Max.Credit',
         img: 'https://unicom24.ru/media/open/5/4/46/446add8ad4f0c291d8dbb410f5b21c4f.png',
         link: 'https://pxl.leads.su/click/29be0e51e40c2206517d170dfd59c596?erid=5UGfMyC4',
-        body: 3000,
+        min: 3000,
         descr: [
             {
                 body: 'Сумма: от 3к руб',
@@ -371,7 +371,7 @@ export const data = [
         name: 'Zaymigo',
         img: 'data:image/jpeg;base64,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',
         link: 'https://pxl.leads.su/click/9b067cd02f6287575f8872e9dbbb9545?erid=5UGfMqXM',
-        body: 4000,
+        min: 4000,
         descr: [
             {
                 body: 'Сумма: от 4к руб',
@@ -394,7 +394,7 @@ export const data = [
         name: 'CreditPlus',
         img: 'https://www.kreditos.ru/thumbs/200x200/08cd9c2fae368eedc20d574fadac542e.jpg',
         link: 'https://pxl.leads.su/click/30c4b1cc644a966fe4e2f4c9d192734b?erid=21jyGZg',
-        body: 1000,
+        min: 1000,
         descr: [
             {
                 body: 'Сумма: от 1к руб',
@@ -417,7 +417,7 @@ export const data = [
         name: 'Умные наличные',
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTobITfRIFcwDsAqYW_zCrZ7IMmlxvhYD68ehU09-FU99DdMx9uLAvN9OyUv1vA-oyu1NM&usqp=CAU',
         link: 'https://pxl.leads.su/click/3d8df00697af1fc4c47598f4cfced8c6?erid=5UGfMxtQ',
-        body: 3000,
+        min: 3000,
         descr: [
             {
                 body: 'Сумма: от 3к руб',
@@ -440,7 +440,7 @@ export const data = [
         name: 'Viva деньги',
         img: 'https://zet-zaim.ru/zz/viva.jpg',
         link: 'https://pxl.leads.su/click/00daa35c50b91c67ad66531303addc0c?erid=21jyGZL',
-        body: 3000,
+        min: 3000,
         descr: [
             {
                 body: 'Сумма: от 3к руб',
@@ -463,10 +463,10 @@ export const data = [
         name: 'Смс финанс',
         img: 'https://www.kreditos.ru/thumbs/200x200/a97ef8cd19adddedb2309d771c552bf4.jpg',
         link: 'https://pxl.leads.su/click/a7d8a43ad7f7cdcd7090b184113d48e9?erid=21jyGZZ',
-        body: 1000,
+        min: 1000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+                body: 'Сумма: от 1к руб',
             },
             {
                 body: 'Ставка: 1% день',
@@ -486,7 +486,7 @@ export const data = [
         name: 'Krediska',
         img: 'https://snurk.ru/upload/iblock/ea1/zp69193xatkgz4cphmhjr2l5gqbbzeum.png',
         link: 'https://pxl.leads.su/click/e7249b370acb41dbe4253ec3d5827c20?erid=get_it_soon',
-        body: 1000,
+        min: 1000,
         descr: [
             {
                 body: 'Сумма: от 1к руб',
@@ -509,7 +509,7 @@ export const data = [
         name: 'Деньги сразу',
         img: 'https://reotv.kz/images/infodata/2022031615132341.jpg',
         link: 'https://pxl.leads.su/click/f741c3113b69e370e3160bd00deac30b?erid=21jyGZU',
-        body: 1000,
+        min: 1000,
         descr: [
             {
                 body: 'Сумма: от 1к руб',
@@ -532,7 +532,7 @@ export const data = [
         name: 'Ezaem',
         img: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX/////gSZHUWb/eAA4RFw1QVpAS2H/+PT/dgD/egD/6N3/6Nv/9O3LzdIxPlc8R16Jjpr19vZSW2/g4uS2ucDm6Op/hZLAw8nb3N+sr7dmbn4sOlT/gh/5+frv8PJsc4Oipq8hMU6PlJ+jp7BbZHb/q3j/r4H/m1v/n2N2fIvT1dm9wMaOk59MVmrIys9ocICqJBGNAAAEI0lEQVR4nO3YfWOaOADHcc8lud6DgA8gyKCK7jZtq+//3V0SCES0m91sa+++nz82zYPya8gDDgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgJ7fL3LSbXyqeIerv8CXu4v80+u2WwUn5LsE+KHPv13kc6/bSAxP5O8S4IcuC/h/TRge36X/vYRhVpSeW11pfiXh7F2u+KV+YaX5IAm/3n26wN23XrcPlHDw10X6vT5Swp/zbML9NvF5TcbzZRQtH0r9Kk3Tsddnlz0m0XrklZS6hflvViXVrG66W0dJNX+FKM94NmEilCe8d+XTbS5CXSDypEhymUeuolgKGZqmIqja1VgFcjUbLHNTIfKHwWCupO0djvpf+FpswoczFZHyDwFq2xSvg7ZcTQ76H5dwNwzb1qFKm9KJfjOPpDtKpFXQHivSM1/6GuyOvzksWi5KlMuGiaSaMazMxSoRyEDUSV3CUX5Uke/ahMONGiop7dlJ6Tqlm5iXm7dM6A+WbCZWMY1rZaIvSyxt4cwMgTjsy2I82kovYWzeyPuuIhy3CXXFY1rumy+Q1bTcmeKgfJ+E7tI6M9EOYWEay6yp2Isu4UH/FaS72Wc6YliX24Ry3jYfSjv/Ut1CvNFMtAmV6OS9hDs9bOqpfp3pqRYu26oH4RLupMthLXU7YYfIJGx6lGZoRb2oFeHbJlSP807ve2Ozfoi4frMwo+BVTlzCSrUz1VIui0mo6rJSdJOvUG+b8Ds7fvFkZkyzbBTyaAj1jqKahCZqtW+N7v2KZi0q7Rm/+aTbSXivvIk3NbNn79W2CYPerW6WzIOpMLvFum5sErpUt5MwCts1Y1DPNrHzql3CcTA8Ud+Qk27cTELZbII3kzCTbiystJ9w2yQs7BjKI8H1E/59kZck3NtltHsejoPe+cclHJihXpfxkfG1E3759McFTn5r+05Cu4u7ZdQy0yvx3m/cOmJWlu3gjGsmvPoT8HioLyM4uoytWXe6o4hZeeqEZqMMpl5LtzdeM+HVf8XY+Mtoc91mS1sctagTjk3FpLufkzy5rYTnni2S0OxxvcInk2lR37jpRHWntrUZzqdmFUo34VAkt5RwqMIjgb6m2D4rRI+RY68trRfNwzJbLuwzR7ufb83ZR06qLKs2dv5ubyph//Bd1XPMPO04st6357lq/iL2MdB7PryvO4SheUIaBk3xjaw0J5t1m9BL3ZxM0olU7jlrlgnvPJCF7SNwqNx9f82EP/tb20qeyHXCuFeet2vOfCtMQRjFg3Kx2HSr1Djb1G03WbvmPAVy5RLqT1y5hPojVi/e8f+8yEm36RnmAuNemd9H151/fC10Tez/ZF56PU1dW66PBC8NCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AgRnX7etRB+PAAAAAElFTkSuQmCC',
         link: 'https://pxl.leads.su/click/b68478dd768f41cdb86a72c5dba16cb6?erid=21jyGZh',
-        body: 3000,
+        min: 3000,
         descr: [
             {
                 body: 'Сумма: от 3к руб',
@@ -555,10 +555,10 @@ export const data = [
         name: 'Moneza',
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmnmVLWKEQ1j9EooyqZxJjJ158yJj5gUrANoxVutQ9Wu4IYY9Ia0A1ZPYz9FUUkRmQbjM&usqp=CAU',
         link: 'https://pxl.leads.su/click/a0e1267e478ad37077c2400f9dbd7562?erid=5UGfMqgB',
-        body: 1000,
+        min: 1000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+                body: 'Сумма: от 1к руб',
             },
             {
                 body: 'Ставка: 1% день',
@@ -781,7 +781,7 @@ export const bestIdea = [
 ]
 export const updComp = [
     {
-        img: 'Обновление от 01.11.2022',
+        title: 'Обновление от 01.11.2022',
         body: [
             {
                 desc: 'Обновлена старница "подбор займа"',

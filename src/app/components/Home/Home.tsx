@@ -44,6 +44,7 @@ export default observer(() => {
                                                     float: 'right',
                                                     marginLeft: '1rem',
                                                     borderColor: 'rgba(255,255,255,0)',
+                                                    borderRadius: '150px',
                                                 }}
                                                 variant="outline-danger"
                                             >
@@ -87,7 +88,7 @@ const MyDescr = observer(({ data }: any) => {
         <div style={{ display: 'inline-block' }}>
             <Row style={{ display: 'inline-block' }}>
                 {data.map((data) => (
-                    <Col key={nanoid()} style={{ display: 'inline-block' }} md={4}>
+                    <Col key={nanoid()} style={{ display: 'inline-block' }} xs={4} sm={4} md={4}>
                         {data.body}
                     </Col>
                 ))}

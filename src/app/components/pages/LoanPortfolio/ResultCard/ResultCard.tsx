@@ -1,58 +1,60 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Card, Row, Col, Button } from 'react-bootstrap'
-import { CSSTransition } from 'react-transition-group'
+import React, { useEffect } from 'react'
 import { observer } from 'mobx-react-lite'
-
+import { Button, Card, Col, Row } from 'react-bootstrap'
 import { nanoid } from 'nanoid'
+import electivesStore from '../../../../lib/store/pages/Electives-store'
 import { data } from '../../../../generic/Data/DataCard'
 import Info from '../../Modal/Info/Info'
-import electivesStore from '../../../../lib/store/pages/Electives-store'
-import electivesStore from '../../../../lib/store/pages/Electives-store'
+import './ResultCard.scss'
+import ModalLoader from '../../../../generic/ModalLoader/ModalLoader'
 
 export default observer(() => {
-    const [showMessage, setShowMessage] = useState(false)
-
-    const nodeRef = useRef(null)
-
-    useEffect(() => {
-        setShowMessage(true)
-    }, [])
-
     const redirect = (val) => {
         electivesStore.setLink(val)
     }
-
+    useEffect(() => {
+        electivesStore.setToastBtn('Калькулятор')
+        electivesStore.setStateLoader(false)
+    }, [])
     return (
-        <CSSTransition in={showMessage} nodeRef={nodeRef} timeout={300} classNames="alert" unmountOnExit>
-            <div ref={nodeRef}>
-                {data.map((data) => (
-                    <Row key={nanoid()} style={{ display: 'inline-block' }}>
-                        <Col key={nanoid()}>
-                            {data.min - 1 < electivesStore.minNumRange ? (
-                                <Card key={nanoid()} className={'home'}>
+        <>
+            <ModalLoader />
+            {data.map((data) => (
+                <div className={'result-block'} key={nanoid()}>
+                    {data.min - 1 < electivesStore.minNumRange ? (
+                        <Row>
+                            <Col style={{ display: 'inline-block' }} key={nanoid()}>
+                                <Card style={{ display: 'inline-block' }} key={nanoid()} className={'home'}>
                                     <div key={nanoid()} className={'home-item'}>
-                                        <Col key={nanoid()} xs={5} md={5}>
+                                        <Col key={nanoid()} xs={3} md={3}>
                                             <Card.Img
                                                 key={nanoid()}
-                                                style={{ borderRadius: '15px' }}
+                                                className={'card-img'}
                                                 variant="top"
-                                                src={data.title}
+                                                src={data.img}
                                             />
                                             <br />
                                             <br />
                                         </Col>
                                         <Col key={nanoid()} xs={7} md={7}>
-                                            <Card key={nanoid()} className={'desc'}>
-                                                {data.loan}
-                                            </Card>
-                                            <Card key={nanoid()} className={'desc'}>
-                                                {data.sum}
-                                            </Card>
-                                            <Card key={nanoid()} className={'desc'}>
-                                                {data.bet}
-                                            </Card>
+                                            <div className={'title-card'}>
+                                                {data.name}
+                                                <Button
+                                                    style={{
+                                                        float: 'right',
+                                                        marginLeft: '1rem',
+                                                        borderColor: 'rgba(255,255,255,0)',
+                                                        borderRadius: '150px',
+                                                    }}
+                                                    variant="outline-danger"
+                                                >
+                                                    <i className="fa fa-heart-o" aria-hidden="true"></i>
+                                                </Button>
+                                            </div>
+                                            <MyStat key={nanoid()} data={data.rate} />
                                         </Col>
                                     </div>
+                                    <MyDescr key={nanoid()} data={data.descr} />
                                     <br />
                                     <br />
                                     <div key={nanoid()} className={'home-item'}>
@@ -74,11 +76,36 @@ export default observer(() => {
                                         </Col>
                                     </div>
                                 </Card>
-                            ) : null}
-                        </Col>
-                    </Row>
+                            </Col>
+                        </Row>
+                    ) : null}
+                </div>
+            ))}
+        </>
+    )
+})
+const MyDescr = observer(({ data }: any) => {
+    return (
+        <div style={{ display: 'inline-block' }}>
+            <Row style={{ display: 'inline-block' }}>
+                {data.map((data) => (
+                    <Col key={nanoid()} style={{ display: 'inline-block' }} xs={4} sm={4} md={4}>
+                        {data.body}
+                    </Col>
                 ))}
-            </div>
-        </CSSTransition>
+            </Row>
+        </div>
+    )
+})
+const MyStat = observer(({ data }: any) => {
+    return (
+        <div style={{ margin: '0 0 0 10px' }}>
+            {data.map((data) => (
+                <div style={{ fontSize: '12px' }} key={nanoid()}>
+                    {data.star}
+                    <i className="fa fa-star" aria-hidden="true" /> {data.feedback} Отвыз
+                </div>
+            ))}
+        </div>
     )
 })

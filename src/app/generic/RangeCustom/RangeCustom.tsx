@@ -27,7 +27,7 @@ export default observer(({ value, valueBtn, onChange, onChangeBtn, minRange, max
             <Col style={{ display: 'inline-block' }}>
                 <Form>
                     <Form.Group as={Row}>
-                        <Col md={12} style={{ display: 'inline-block' }}>
+                        <Col sm={6} md={12} style={{ display: 'inline-block' }}>
                             <br />
                             Сумма
                             <Form.Control
