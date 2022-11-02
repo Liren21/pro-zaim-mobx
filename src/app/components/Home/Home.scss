@@ -2,6 +2,9 @@
   opacity: 0;
   transform: scale(0.9);
 }
+.title-card{
+  margin: 5px -40px 0 10px;
+}
 
 .alert-enter-active {
   opacity: 1;
@@ -18,7 +21,9 @@
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;
 }
-
+.fa-heart-o:before{
+  font-size: 1.5rem!important;
+}
 .home {
   padding: 1.61rem;
   width: 18rem;
@@ -35,6 +40,7 @@
   .desc:hover {
     transform: none;
     box-shadow: none;
+
   }
 
   .home-btn {
@@ -44,10 +50,10 @@
   .card-img {
     border: 2px solid #e3e3e3;
     border-radius: 12px;
-
-    .bob {
-      display: block !important;
-    }
+  }
+  .fa-star:before{
+    color: #eab107;
+    margin: 0 0 0 2px;
   }
 }
 
