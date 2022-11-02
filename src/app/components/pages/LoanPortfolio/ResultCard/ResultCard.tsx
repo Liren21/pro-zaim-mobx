@@ -6,8 +6,8 @@ import { observer } from 'mobx-react-lite'
 import { nanoid } from 'nanoid'
 import { data } from '../../../../generic/Data/DataCard'
 import Info from '../../Modal/Info/Info'
-import electivesStore from '../../../../lib/store/pages/ElectivesStore-store'
-import electivesStoreStore from '../../../../lib/store/pages/ElectivesStore-store'
+import electivesStore from '../../../../lib/store/pages/Electives-store'
+import electivesStore from '../../../../lib/store/pages/Electives-store'
 
 export default observer(() => {
     const [showMessage, setShowMessage] = useState(false)
@@ -28,7 +28,7 @@ export default observer(() => {
                 {data.map((data) => (
                     <Row key={nanoid()} style={{ display: 'inline-block' }}>
                         <Col key={nanoid()}>
-                            {data.min - 1 < electivesStoreStore.minNumRange ? (
+                            {data.min - 1 < electivesStore.minNumRange ? (
                                 <Card key={nanoid()} className={'home'}>
                                     <div key={nanoid()} className={'home-item'}>
                                         <Col key={nanoid()} xs={5} md={5}>

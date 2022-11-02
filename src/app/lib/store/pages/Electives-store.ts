@@ -8,11 +8,13 @@ interface IElectivesStore {
     messageToastHome: string
     minNumRange: number
     maxNumRange: number
+    toastBtn: string
 }
 
 class ElectivesStore implements IElectivesStore {
     link = ''
     messageToastHome = ''
+    toastBtn = ''
     minNumRange = 0
     maxNumRange = 0
     stateOffcanvas = false
@@ -28,6 +30,9 @@ class ElectivesStore implements IElectivesStore {
     }
     setMessageToastHome(val: string) {
         this.messageToastHome = val
+    }
+    setToastBtn(val: string) {
+        this.toastBtn = val
     }
     setMinNumRange(val: number) {
         this.minNumRange = val

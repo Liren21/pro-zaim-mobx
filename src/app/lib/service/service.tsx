@@ -3,7 +3,7 @@ import { handlerError, handlerSuccess } from '../../../core/lib/api/common'
 import urls from '../urls'
 import appStore from '../../../core/lib/store/app'
 import { Student } from '../models/student'
-import electivesStore from '../store/pages/ElectivesStore-store'
+import electivesStore from '../store/pages/Electives-store'
 
 export default {
     async getStudentsById(): Promise<Student> {

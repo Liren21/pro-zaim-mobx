@@ -6,7 +6,7 @@ import { Button, Card, Col, Row } from 'react-bootstrap'
 import Info from '../pages/Modal/Info/Info'
 import { nanoid } from 'nanoid'
 import { CSSTransition } from 'react-transition-group'
-import electivesStore from '../../lib/store/pages/ElectivesStore-store'
+import electivesStore from '../../lib/store/pages/Electives-store'
 import ToastCustom from '../../generic/ToastCustom/ToastCustom'
 import ModalLoader from '../../generic/ModalLoader/ModalLoader'
 
@@ -17,6 +17,7 @@ export default observer(() => {
         electivesStore.setLink(val)
     }
     useEffect(() => {
+        electivesStore.setToastBtn('Займ')
         setShowMessage(true)
         electivesStore.setStateLoader(false)
     }, [])
@@ -30,10 +31,10 @@ export default observer(() => {
                         <Col key={nanoid()}>
                             <Card key={nanoid()} className={'home'}>
                                 <div key={nanoid()} className={'home-item'}>
-                                    <Col key={nanoid()} xs={5} md={5}>
+                                    <Col key={nanoid()} xs={3} md={3}>
                                         <Card.Img
                                             key={nanoid()}
-                                            style={{ borderRadius: '15px' }}
+                                            className={'card-img'}
                                             variant="top"
                                             src={data.title}
                                         />
@@ -41,17 +42,10 @@ export default observer(() => {
                                         <br />
                                     </Col>
                                     <Col key={nanoid()} xs={7} md={7}>
-                                        <Card key={nanoid()} className={'desc'}>
-                                            {data.loan}
-                                        </Card>
-                                        <Card key={nanoid()} className={'desc'}>
-                                            {data.sum}
-                                        </Card>
-                                        <Card key={nanoid()} className={'desc'}>
-                                            {data.bet}
-                                        </Card>
+                                        {data.name}
                                     </Col>
                                 </div>
+                                <MyDescr key={nanoid()} data={data.descr}/>
                                 <br />
                                 <br />
                                 <div key={nanoid()} className={'home-item'}>
@@ -79,4 +73,17 @@ export default observer(() => {
             </div>
         </CSSTransition>
     )
+})
+const MyDescr = observer(({ data }:any) => {
+    console.log(data)
+    return (
+        <div>
+            {data.map((data) => (
+                <div key={nanoid()} className={'desc'}>
+                    {data.body}
+                    <br/><br/>
+                </div>
+            ))}
+        </div>
+    );
 })

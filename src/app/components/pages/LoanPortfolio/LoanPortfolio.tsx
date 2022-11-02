@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group'
 import './LoanPortfolio.scss'
 import { observer } from 'mobx-react-lite'
 import RangeCustom from '../../../generic/RangeCustom/RangeCustom'
-import electivesStoreStore from '../../../lib/store/pages/ElectivesStore-store'
+import electivesStore from '../../../lib/store/pages/Electives-store'
 import { nanoid } from 'nanoid'
 import ResultCard from './ResultCard/ResultCard'
 
@@ -14,6 +14,7 @@ export default observer(() => {
     const nodeRef = useRef(null)
 
     useEffect(() => {
+        electivesStore.setToastBtn('Калькулятор')
         setShowMessage(true)
     }, [])
     return (
@@ -26,7 +27,7 @@ export default observer(() => {
                             <Card.Title>Введите сумму от</Card.Title>
                             <RangeCustom
                                 tab={'min'}
-                                onChangeBtn={electivesStoreStore.setMinNumRange}
+                                onChangeBtn={electivesStore.setMinNumRange}
                                 minRange={100}
                                 maxRange={100000}
                                 key={nanoid()}

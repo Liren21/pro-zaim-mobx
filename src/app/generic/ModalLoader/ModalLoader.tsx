@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite'
 
 import { Modal, Spinner } from 'react-bootstrap'
 
-import electivesStoreStore from '../../lib/store/pages/ElectivesStore-store'
+import electivesStore from '../../lib/store/pages/Electives-store'
 import './ModalLoader.scss'
 
 export default observer(() => {
@@ -11,8 +11,8 @@ export default observer(() => {
         <div>
             <Modal
                 centered
-                show={electivesStoreStore.stateLoader}
-                onHide={() => electivesStoreStore.setStateLoader(false)}
+                show={electivesStore.stateLoader}
+                onHide={() => electivesStore.setStateLoader(false)}
                 backdrop="static"
                 keyboard={false}
             >

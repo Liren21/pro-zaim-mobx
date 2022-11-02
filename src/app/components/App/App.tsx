@@ -24,7 +24,7 @@ export const App = observer((): JSX.Element => {
     return (
         <div className={'app'}>
             <HeaderApp />
-            <Container fluid="sm">
+            <Container >
                 <LoaderOverlay loading={appStore.loading} />
                 <Router />
             </Container>
