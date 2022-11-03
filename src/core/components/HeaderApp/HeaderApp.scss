@@ -34,33 +34,34 @@
       color: #fff !important;
     }
   }
+  .header-btn-hone,.header-btn-calculate,.header-btn-cprofile-offers,.header-btn-upd-comp{
+    color: #ffffff;
+  }
+  [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled){
+    border: solid ;
+  }
 }
 
 .navbar-nav {
   color: #ffffff;
 }
 
-.mob-offcanvas {
-  display: none;
-}
 
 .offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
   background: linear-gradient(45deg, rgb(170, 10, 255), rgb(205, 151, 239));
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .header-app {
     width: 100%;
     margin: 0 !important;
     border-radius: 0;
   }
-  .navbar-toggler {
-    display: none !important;
+  .header-btn-hone,.header-btn-calculate{
+    display: none!important;
   }
 
-  .navbar-nav, .justify-content-end {
-    display: contents !important;
-  }
+
 }
 
 

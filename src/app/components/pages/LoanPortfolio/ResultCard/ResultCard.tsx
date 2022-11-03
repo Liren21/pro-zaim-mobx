@@ -21,7 +21,7 @@ export default observer(() => {
             <ModalLoader />
             {data.map((data) => (
                 <div className={'result-block'} key={nanoid()}>
-                    {data.min - 1 < electivesStore.minNumRange ? (
+                    {data.min - 1 >= electivesStore.minNumRange ? null : (
                         <Row>
                             <Col style={{ display: 'inline-block' }} key={nanoid()}>
                                 <Card style={{ display: 'inline-block' }} key={nanoid()} className={'home'}>
@@ -78,7 +78,7 @@ export default observer(() => {
                                 </Card>
                             </Col>
                         </Row>
-                    ) : null}
+                    )}
                 </div>
             ))}
         </>

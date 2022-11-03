@@ -12,7 +12,9 @@ import ModalLoader from '../../generic/ModalLoader/ModalLoader'
 
 export default observer(() => {
     const [showMessage, setShowMessage] = useState(false)
+    const [heart, setHeart] = useState(false)
     const nodeRef = useRef(null)
+    console.log(electivesStore.stateHeart)
     const redirect = (val) => {
         electivesStore.setLink(val)
     }
@@ -39,17 +41,33 @@ export default observer(() => {
                                     <Col key={nanoid()} xs={7} md={7}>
                                         <div className={'title-card'}>
                                             {data.name}
-                                            <Button
-                                                style={{
-                                                    float: 'right',
-                                                    marginLeft: '1rem',
-                                                    borderColor: 'rgba(255,255,255,0)',
-                                                    borderRadius: '150px',
-                                                }}
-                                                variant="outline-danger"
-                                            >
-                                                <i className="fa fa-heart-o" aria-hidden="true"></i>
-                                            </Button>
+
+                                            {heart ? (
+                                                <i
+                                                    style={{
+                                                        float: 'right',
+                                                        marginLeft: '1rem',
+                                                        borderColor: 'rgba(255,255,255,0)',
+                                                        borderRadius: '150px',
+                                                    }}
+                                                    onClick={() => setHeart(false)}
+                                                    className="fa fa-heart"
+                                                    aria-hidden="true"
+                                                />
+                                            ) : (
+                                                <i
+                                                    style={{
+                                                        float: 'right',
+                                                        marginLeft: '1rem',
+                                                        borderColor: 'rgba(255,255,255,0)',
+                                                        borderRadius: '150px',
+                                                    }}
+                                                    onClick={() => setHeart(true)}
+                                                    className="fa fa-heart-o"
+                                                    aria-hidden="true"
+                                                    // Добавить добавление в массив имени
+                                                />
+                                            )}
                                         </div>
                                         <MyStat key={nanoid()} data={data.rate} />
                                     </Col>
