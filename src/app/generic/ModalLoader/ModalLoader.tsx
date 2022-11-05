@@ -18,7 +18,7 @@ export default observer(() => {
             >
                 <Modal.Body className={'modal-loader'}>
                     <Spinner animation="border" variant="light" />
-                    <div>Загрузка...</div>
+                    <div style={{ color: '#ffffff' }}>Загрузка...</div>
                 </Modal.Body>
             </Modal>
         </div>

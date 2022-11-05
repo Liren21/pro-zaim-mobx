@@ -1,14 +1,19 @@
 .modal-content {
-  background: #aa0aff;
   border-radius: 25px;
 }
 
-.accordion-item:last-of-type .accordion-button.collapsed,.accordion-item:last-of-type,.accordion-item:first-of-type, .accordion-button,.accordion-item:first-of-type {
+.accordion-item:last-of-type .accordion-button.collapsed,.accordion-item:last-of-type,.accordion-item:first-of-type, .accordion-item:first-of-type {
   border-radius: 18px !important;
 
 }
+.accordion-button,{
+  border-top-left-radius: 18px!important;
+  border-top-right-radius: 18px!important;
+}
 .fa-check-circle-o:before{
   font-size: 1rem;
-  color: #aa0aff;
-
+  color: #0ab944;
+}
+.accordion-body{
+  background: #e7f1ff;
 }

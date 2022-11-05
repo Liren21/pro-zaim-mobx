@@ -5,14 +5,14 @@ import { observer } from 'mobx-react-lite'
 import './HeaderApp.scss'
 import Scrollbar from 'react-scrollbars-custom'
 import routes from '../../../app/lib/routes'
-
+import Icons from '../../../app/generic/Img/Icon.svg'
 const HeaderApp = observer(() => {
     return (
         <Scrollbar>
             <div className={'header-app'}>
-                <Navbar variant={'dark'} sticky="top" expand="lg" collapseOnSelect>
+                <Navbar variant={'light'} sticky="top" expand="lg" collapseOnSelect>
                     <Navbar.Brand className={'title'} href={routes.HOME}>
-                        Pro zайм
+                        <img style={{ width: '2rem' }} src={Icons} /> Pro zайм
                     </Navbar.Brand>
                     <Navbar.Toggle label={'меню'} aria-controls={'basic-navbar-nav'} />
                     <Navbar.Offcanvas
@@ -21,8 +21,8 @@ const HeaderApp = observer(() => {
                         placement="end"
                     >
                         <Offcanvas.Header closeButton>
-                            <Offcanvas.Title style={{ color: '#fff' }} id={'offcanvasNavbarLabel-expand-lg'}>
-                                Меню
+                            <Offcanvas.Title id={'offcanvasNavbarLabel-expand-lg'}>
+                                <img style={{ width: '2rem' }} src={Icons} /> Pro zайм
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>

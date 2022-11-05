@@ -30,7 +30,7 @@ const MyComponent = ({ data }: any) => (
         {/* eslint-disable-next-line @typescript-eslint/no-unsafe-call */}
         {data.map((data) => (
             <Card style={{ transform: 'none', boxShadow: 'none' }} key={nanoid()}>
-                <Card.Title>{data.img}</Card.Title>
+                {data.img ? <Card.Title>{data.img}</Card.Title> : null}
                 <Card.Body>
                     {data.body} <i className="fa fa-check-circle-o" aria-hidden="true" />
                 </Card.Body>

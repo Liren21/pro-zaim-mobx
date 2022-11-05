@@ -25,7 +25,7 @@ body {
   border-radius: 28px;
   padding: 1rem;
   transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.1), 0 15px 40px rgba(166, 173, 201, 0.3);
+
 
   .card-header {
     border-top-left-radius: 20px;
@@ -34,7 +34,7 @@ body {
 }
 
 .card:hover {
-  box-shadow: 4px 9px 32px 0 rgba(155, 138, 251, 0.5);
+  box-shadow: 4px 9px 32px 0 rgba(251, 0, 1, 0.2);
   transform: translateY(-5px);
 }
 

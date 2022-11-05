@@ -6,11 +6,10 @@
   width: 70%;
   z-index: 1;
   padding: 0 20px;
-  background: linear-gradient(45deg, rgb(170, 10, 255), rgb(205, 151, 239));
+  background: white;
   box-shadow: 0 5px 14px 1px rgba(34, 60, 80, 0.16);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  color: #ffffff !important;
 
   .icon {
     color: #fff;
@@ -18,7 +17,7 @@
   }
 
   .title {
-    color: rgb(255, 255, 255);
+
 
 
     hr {
@@ -30,26 +29,20 @@
       font-size: .7rem;
     }
 
-    .a {
-      color: #fff !important;
-    }
+
   }
   .header-btn-hone,.header-btn-calculate,.header-btn-cprofile-offers,.header-btn-upd-comp{
-    color: #ffffff;
+
   }
   [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled){
     border: solid ;
   }
 }
 
-.navbar-nav {
-  color: #ffffff;
-}
 
 
-.offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
-  background: linear-gradient(45deg, rgb(170, 10, 255), rgb(205, 151, 239));
-}
+
+
 
 @media (max-width: 767px) {
   .header-app {
