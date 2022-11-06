@@ -11,13 +11,27 @@ import ToastCustom from '../../generic/ToastCustom/ToastCustom'
 import ModalLoader from '../../generic/ModalLoader/ModalLoader'
 
 export default observer(() => {
+    const [arr, setArr] = useState([])
+    const [heart, setHeart] = useState([])
+
     const [showMessage, setShowMessage] = useState(false)
-    const [heart, setHeart] = useState(false)
+
     const nodeRef = useRef(null)
-    console.log(electivesStore.stateHeart)
+
     const redirect = (val) => {
         electivesStore.setLink(val)
     }
+    const store = localStorage.getItem('id')
+    const storeOne = localStorage.getItem('id')
+    console.log(arr)
+    useEffect(() => {
+        if (store) {
+            setArr(JSON.parse(store))
+        }
+    }, [])
+    useEffect(() => {
+        localStorage.setItem('id', JSON.stringify(arr))
+    })
     useEffect(() => {
         electivesStore.setToastBtn('Займ')
         setShowMessage(true)
@@ -38,36 +52,27 @@ export default observer(() => {
                                         <br />
                                         <br />
                                     </Col>
+
                                     <Col key={nanoid()} xs={7} md={7}>
                                         <div className={'title-card'}>
                                             {data.name}
 
-                                            {heart ? (
-                                                <i
-                                                    style={{
-                                                        float: 'right',
-                                                        marginLeft: '1rem',
-                                                        borderColor: 'rgba(255,255,255,0)',
-                                                        borderRadius: '150px',
-                                                    }}
-                                                    onClick={() => setHeart(false)}
-                                                    className="fa fa-heart"
-                                                    aria-hidden="true"
-                                                />
-                                            ) : (
-                                                <i
-                                                    style={{
-                                                        float: 'right',
-                                                        marginLeft: '1rem',
-                                                        borderColor: 'rgba(255,255,255,0)',
-                                                        borderRadius: '150px',
-                                                    }}
-                                                    onClick={() => setHeart(true)}
-                                                    className="fa fa-heart-o"
-                                                    aria-hidden="true"
-                                                    // Добавить добавление в массив имени
-                                                />
-                                            )}
+                                            {/* {arr.map((kok) => (*/}
+                                            {/*    <>*/}
+                                            {/*        {kok.id == data.name ? (*/}
+                                            {/*            <i*/}
+                                            {/*                style={{*/}
+                                            {/*                    float: 'right',*/}
+                                            {/*                    marginLeft: '1rem',*/}
+                                            {/*                    borderColor: 'rgba(255,255,255,0)',*/}
+                                            {/*                    borderRadius: '150px',*/}
+                                            {/*                }}*/}
+                                            {/*                className="fa fa-heart"*/}
+                                            {/*                aria-hidden="true"*/}
+                                            {/*            />*/}
+                                            {/*        ) : null}*/}
+                                            {/*    </>*/}
+                                            {/* ))}*/}
                                         </div>
                                         <MyStat key={nanoid()} data={data.rate} />
                                     </Col>

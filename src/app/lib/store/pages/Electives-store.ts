@@ -5,7 +5,7 @@ interface IElectivesStore {
     stateOffcanvas: boolean
     stateLoader: boolean
     stateToastHome: boolean
-    stateHeart: boolean
+    stateHeart: []
     messageToastHome: string
     minNumRange: number
     maxNumRange: number
@@ -21,7 +21,7 @@ class ElectivesStore implements IElectivesStore {
     stateOffcanvas = false
     stateLoader = false
     stateToastHome = false
-    stateHeart = false
+    stateHeart: [] = []
 
     constructor() {
         makeAutoObservable(this, {}, { deep: true })
@@ -48,7 +48,7 @@ class ElectivesStore implements IElectivesStore {
     setStateLoader(val: boolean) {
         this.stateLoader = val
     }
-    setStateHeart(val: boolean) {
+    setStateHeart(val: []) {
         this.stateHeart = val
     }
     // redirectLink() {

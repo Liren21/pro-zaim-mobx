@@ -115,7 +115,7 @@ export const data = [
         ],
     },
     {
-        name: 'Webbnkir',
+        name: 'Webbankir',
         img: 'https://hh.ru/employer-logo/2292673.jpeg',
         link: 'https://pxl.leads.su/click/e08bab359c68c3a518fe74d015a23102?erid=21jyGZM',
         min: 3000,
