@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Card, Form } from 'react-bootstrap'
+import { Alert, Card, Form } from 'react-bootstrap'
 import { CSSTransition } from 'react-transition-group'
 import './LoanPortfolio.scss'
 import { observer } from 'mobx-react-lite'
@@ -22,9 +22,9 @@ export default observer(() => {
                     <br />
                     <Card.Title> Калькулятор выбора займа</Card.Title>
                     <br />
-                    <div className={'loan-portfolio-text'}>
+                    <Alert key={'primary'} variant={'primary'} className={'loan-portfolio-text'}>
                         Калькулято предоставляет наилучший выбор конторы для займа
-                    </div>
+                    </Alert>
                     <br />
                     <br />
                     <Form.Label htmlFor="disabledTextInput">Сумма до</Form.Label>

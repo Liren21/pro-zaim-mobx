@@ -38,36 +38,7 @@ export default observer(() => {
                                             <br />
                                         </Col>
                                         <Col key={nanoid()} xs={7} md={7}>
-                                            <div className={'title-card'}>
-                                                {data.name}
-
-                                                {heart ? (
-                                                    <i
-                                                        style={{
-                                                            float: 'right',
-                                                            marginLeft: '1rem',
-                                                            borderColor: 'rgba(255,255,255,0)',
-                                                            borderRadius: '150px',
-                                                        }}
-                                                        onClick={() => setHeart(false)}
-                                                        className="fa fa-heart"
-                                                        aria-hidden="true"
-                                                    />
-                                                ) : (
-                                                    <i
-                                                        style={{
-                                                            float: 'right',
-                                                            marginLeft: '1rem',
-                                                            borderColor: 'rgba(255,255,255,0)',
-                                                            borderRadius: '150px',
-                                                        }}
-                                                        onClick={() => setHeart(true)}
-                                                        className="fa fa-heart-o"
-                                                        aria-hidden="true"
-                                                        // Добавить добавление в массив имени
-                                                    />
-                                                )}
-                                            </div>
+                                            <div className={'title-card'}>{data.name}</div>
                                             <MyStat key={nanoid()} data={data.rate} />
                                         </Col>
                                     </div>
@@ -81,7 +52,7 @@ export default observer(() => {
                                         <Col key={nanoid()} xs={6} md={6}>
                                             <Button
                                                 href={data.link}
-                                                variant={'dark'}
+                                                variant={'primary'}
                                                 className={'home-btn'}
                                                 onClick={() => {
                                                     redirect(data.link)

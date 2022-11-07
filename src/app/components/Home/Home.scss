@@ -28,8 +28,17 @@
   font-size: 1.5rem!important;
 }
 .fa-heart:before{
+
   font-size: 1.5rem!important;
   color: red;
+}
+.fa-angle-right:before,.fa-info:before,.fa-sign-in:before{
+  vertical-align: middle;
+  font-size: 1.5rem;
+  color: red;
+}
+.btn-danger{
+  background: #fb0000;
 }
 .home {
   padding: 1.61rem;
@@ -51,7 +60,11 @@
   }
 
   .home-btn {
+
     float: right;
+  }
+  .fa-angle-right:before {
+
   }
 
   .card-img {

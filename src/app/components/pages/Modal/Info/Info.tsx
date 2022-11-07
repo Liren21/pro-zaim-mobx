@@ -12,7 +12,11 @@ export default observer(() => {
 
     return (
         <div className={'info'}>
-            <Button style={{ float: 'left' }} onClick={handleShow} variant="light">
+            <Button
+                style={{ float: 'left', background: '#e7f1ff', color: '#0d6efd' }}
+                onClick={handleShow}
+                variant="light"
+            >
                 Информация
             </Button>
 

@@ -39,7 +39,7 @@ const MyBodyCard = ({ data }: any) => (
     <>
         {/* eslint-disable-next-line @typescript-eslint/no-unsafe-call */}
         {data.map((data) => (
-            <ListGroup.Item key={nanoid()} variant="success">
+            <ListGroup.Item key={nanoid()} variant="primary">
                 <li> {data.desc}</li>
             </ListGroup.Item>
         ))}

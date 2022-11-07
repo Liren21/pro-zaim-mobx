@@ -9,6 +9,7 @@ import { CSSTransition } from 'react-transition-group'
 import electivesStore from '../../lib/store/pages/Electives-store'
 import ToastCustom from '../../generic/ToastCustom/ToastCustom'
 import ModalLoader from '../../generic/ModalLoader/ModalLoader'
+import ArrorIcon from '../../generic/icons/ArrorIcon'
 
 export default observer(() => {
     const [arr, setArr] = useState([])
@@ -87,7 +88,7 @@ export default observer(() => {
                                     <Col key={nanoid()} xs={6} md={6}>
                                         <Button
                                             href={data.link}
-                                            variant={'dark'}
+                                            variant={'primary'}
                                             className={'home-btn'}
                                             onClick={() => {
                                                 redirect(data.link)

@@ -20,14 +20,14 @@
 .btn-bottom-panel-active{
   border-radius: 10px;
   display: inline-block !important;
-  color: #fb0001;
+  color: #0d6dfb;
 }
+
 .fa-credit-card:before,.fa-bar-chart-o:before, .fa-bar-chart:before,.fa-heart-o:before{
   font-size: 1rem;
 }
 @media  (max-width: 767px) {
   .bottom-panel {
     display: inline-block!important;
-
   }
 }
