@@ -1,18 +1,18 @@
 export const data = [
     {
-        name: 'Вебзайм',
+        name: 'Вебзаём',
         img: 'http://i.otzovik.com/objects/b/1190000/1187029.png',
         link: 'https://pxl.leads.su/click/e5320d12882f2b91310f9b702071f6b7?erid=21jyGZB',
         min: 3000,
         descr: [
             {
-                body: 'Сумма:   от 3к руб',
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: 'Ставка: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
             },
             {
-                body: 'Срок: до 30 дней',
+                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   до 30 дней`],
             },
         ],
         rate: [
@@ -29,13 +29,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: 'Ставка: 0%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
             },
             {
-                body: 'Срок: от 10 дней',
+                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 10 дней`],
             },
         ],
         rate: [
@@ -46,19 +46,19 @@ export const data = [
         ],
     },
     {
-        name: 'Займер',
+        name: 'заёмер',
         img: 'https://www.zaymer.ru/images/icons/robot_2.png',
         link: 'https://pxl.leads.su/click/df8646af6896395109a59b6ecb157a7e?erid=21jyGZD',
         min: 2000,
         descr: [
             {
-                body: 'Сумма: от 2к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 2к руб`],
             },
             {
-                body: 'Ставка: 0%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
             },
             {
-                body: 'Срок: от 65 дней',
+              body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 65 дней`],
             },
         ],
         rate: [
@@ -75,13 +75,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: 'Ставка: 1%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
             },
             {
-                body: 'Срок: от 5 дней',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 5 дней`],
             },
         ],
         rate: [
@@ -98,13 +98,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-                body: 'Сумма: от 1к руб',
+             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body: 'Ставка: 0%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
             },
             {
-                body: 'Срок: от 5 дней',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 5 дней`],
             },
         ],
         rate: [
@@ -121,13 +121,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: 'Ставка: 0%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
             },
             {
-                body: 'Срок: от 7 дней',
+                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 7 дней`],
             },
         ],
         rate: [
@@ -144,13 +144,13 @@ export const data = [
         min: 2000,
         descr: [
             {
-                body: 'Сумма: от 2к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 2к руб`],
             },
             {
-                body: 'Ставка: 0%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
             },
             {
-                body: 'Срок: от 7 дней',
+                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 7 дней`],
             },
         ],
         rate: [
@@ -167,13 +167,13 @@ export const data = [
         min: 2000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: 'Ставка: 1%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
             },
             {
-                body: 'Первый займ: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -190,13 +190,13 @@ export const data = [
         min: 100,
         descr: [
             {
-                body: 'Сумма: от 100 руб',
+              body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 100 руб`],
             },
             {
-                body: 'Ставка: 0%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
             },
             {
-                body: 'Срок: от 7 дней',
+                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 7 дней`],
             },
         ],
         rate: [
@@ -207,19 +207,19 @@ export const data = [
         ],
     },
     {
-        name: 'Лайм-займ',
+        name: 'Лайм-заём',
         img: 'https://unicom24.ru/media/open/7/3/20/320a2e591b6396e4b2b991b6868ecd3f.png',
         link: 'https://pxl.leads.su/click/c4511dce74024b9a3ffcea4fc1cb7bf2?erid=21jyGZc',
         min: 2000,
         descr: [
             {
-                body: 'Сумма: от 2к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 2к руб`],
             },
             {
-                body: 'Ставка: 1%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
             },
             {
-                body: 'Первый займ: ',
+               body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -230,19 +230,19 @@ export const data = [
         ],
     },
     {
-        name: 'ТурбоЗайм',
+        name: 'Турбозаём',
         img: 'https://unicom24.ru/media/open/0/c/37/c377e9052a38079be52416e73e6f783f.jpg',
         link: 'https://pxl.leads.su/click/a0701b22e203f438073b77f2a879bbfe?erid=21jyGZn',
         min: 3000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: 'Ставка: 0%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
             },
             {
-                body: 'Срок: от 1 дня',
+                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 1 дня`],
             },
         ],
         rate: [
@@ -259,13 +259,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-                body: 'Сумма: от 1к руб',
+             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body: 'Ставка: 1%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
             },
             {
-                body: 'Первый займ: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -282,13 +282,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: 'Срок: от 1 - 21 дня',
+                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 1-21 дня`],
             },
             {
-                body: 'Первый займ: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -305,13 +305,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-                body: 'Сумма: от 1к руб',
+             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body: 'Срок: от 1 - 21 дня',
+                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 1-21 дня`],
             },
             {
-                body: 'Первый займ: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -328,13 +328,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-                body: 'Сумма: от 1к руб',
+             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body: 'Срок: от 1 дня',
+                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 1 дня`],
             },
             {
-                body: 'Первый займ: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -351,13 +351,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: 'Ставка: 1%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
             },
             {
-                body: 'Первый займ: 1%',
+             body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   1%`] ,
             },
         ],
         rate: [
@@ -374,13 +374,13 @@ export const data = [
         min: 4000,
         descr: [
             {
-                body: 'Сумма: от 4к руб',
+            body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 4к руб`],
             },
             {
-                body: 'Ставка: 1%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
             },
             {
-                body: 'Первый займ: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -397,13 +397,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-                body: 'Сумма: от 1к руб',
+             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body: 'Ставка: от 0.6% ',
+                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0.6%`] ,
             },
             {
-                body: 'Срок: от 1 дня',
+                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 1 дня`],
             },
         ],
         rate: [
@@ -420,13 +420,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: 'Ставка: 1% день',
+             body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
             },
             {
-                body: 'Срок: от 5 дней',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 5 дней`],
             },
         ],
         rate: [
@@ -443,13 +443,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: 'Ставка: 1% в день ',
+                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
             },
             {
-                body: 'Первый займ: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -466,13 +466,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-                body: 'Сумма: от 1к руб',
+             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body: 'Ставка: 1% день',
+             body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
             },
             {
-                body: 'Срок: от 1 дня',
+                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 1 дня`],
             },
         ],
         rate: [
@@ -489,13 +489,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-                body: 'Сумма: от 1к руб',
+             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body: 'Ставка: 0%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
             },
             {
-                body: 'Первый займ: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -512,13 +512,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-                body: 'Сумма: от 1к руб',
+             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body: 'Ставка: 0%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
             },
             {
-                body: 'Первый займ: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -535,13 +535,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-                body: 'Сумма: от 3к руб',
+               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: 'Ставка: 1%',
+               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
             },
             {
-                body: 'Первый займ: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -558,13 +558,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-                body: 'Сумма: от 1к руб',
+             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body: 'Ставка: 1% день',
+             body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
             },
             {
-                body: 'Первый займ: 0%',
+                body:[`<p style="color: rgba(0,0,0,0.5)">1-й заём:</p>   0%`] ,
             },
         ],
         rate: [
@@ -588,7 +588,7 @@ export const dataInsideCard = [
                 body: 'Есть',
             },
             {
-                img: 'Получение займа',
+                img: 'Получение заёма',
                 body: 'Банковская карта, платёжные системы, qiwi кошелек, банковский счет',
             },
             {
@@ -637,7 +637,7 @@ export const dataInsideCard = [
 export const doc = [
     {
         img:
-            'Мой Займ\n' +
+            'Мой заём\n' +
             'Политика конфиденциальности (Privacy Policy)\n' +
             'Эта страница информирует вас о нашей политике в отношении сбора, использования и раскрытия персональных данных при использовании нашего Сервиса и о вариантах, которые вы связали с этими данными.\n' +
             'This page informs you of our policies regarding the collection, use and disclosure of personal data when you use our Service and the choices you have associated with that data.\n' +
@@ -645,8 +645,8 @@ export const doc = [
             'We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.\n' +
             'Определения - Definitions\n' +
             'Сервис - Service\n' +
-            'Сервис - мобильное приложение «Мой Займ», которым управляет «Мой Займ»\n' +
-            'Service is the «Мой Займ» mobile application operated by «Мой Займ»\n' +
+            'Сервис - мобильное приложение «Мой заём», которым управляет «Мой заём»\n' +
+            'Service is the «Мой заём» mobile application operated by «Мой заём»\n' +
             'Персональные данные - Personal Data\n' +
             'Персональные данные - это данные о живом человеке, которые могут быть идентифицированы по этим данным (или по той и другой информации, которая находится в нашем распоряжении или может оказаться в нашем распоряжении).\n' +
             'Personal Data means data about a living individual who can be identified from those data (or from those and other information either in our possession or likely to come into our possession).\n' +
@@ -691,7 +691,7 @@ export const doc = [
             '• Preference Cookies. We use Preference Cookies to remember your preferences and various settings.\n' +
             '• Security Cookies. We use Security Cookies for security purposes.\n' +
             'Использование данных - UseofData\n' +
-            '«Мой Займ» использует собранные данные для различных целей:\n' +
+            '«Мой заём» использует собранные данные для различных целей:\n' +
             '• Предоставлять и поддерживать наш Сервис\n' +
             '• Чтобы уведомить вас об изменениях в нашем Сервисе\n' +
             '• Чтобы позволить вам участвовать в интерактивных функциях нашего Сервиса, когда вы решите это сделать\n' +
@@ -699,7 +699,7 @@ export const doc = [
             '• Собрать анализ или ценную информацию, чтобы мы могли улучшить наш Сервис\n' +
             '• Контролировать использование нашего Сервиса\n' +
             '• обнаруживать, предотвращать и решать технические проблемы\n' +
-            '«Мой Займ» uses the collected data for various purposes:\n' +
+            '«Мой заём» uses the collected data for various purposes:\n' +
             '• To provide and maintain our Service\n' +
             '• To notify you about changes to our Service\n' +
             '• To allow you to participate in interactive features of our Service when you choose to do so\n' +
@@ -712,19 +712,19 @@ export const doc = [
             'Your information, including Personal Data, may be transferred to - and maintained on - computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.Personal data is not collected in application and used only on the side of financial organizations presented in application.\n' +
             'Ваше согласие с настоящей Политикой конфиденциальности, сопровождаемое предоставлением вами такой информации, означает ваше согласие на такую передачу.\n' +
             'Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.\n' +
-            '«Мой Займ» предпримет все разумно необходимые шаги для обеспечения безопасного обращения с вашими данными в соответствии с настоящей Политикой конфиденциальности, и передача ваших Личных данных в организацию или страну не будет осуществляться, если не будут приняты надлежащие меры контроля, включая безопасность ваших данных и другой личной информации.\n' +
-            '«Мой Займ» will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless there are adequate controls in place including the security of your data and other personal information.\n' +
+            '«Мой заём» предпримет все разумно необходимые шаги для обеспечения безопасного обращения с вашими данными в соответствии с настоящей Политикой конфиденциальности, и передача ваших Личных данных в организацию или страну не будет осуществляться, если не будут приняты надлежащие меры контроля, включая безопасность ваших данных и другой личной информации.\n' +
+            '«Мой заём» will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless there are adequate controls in place including the security of your data and other personal information.\n' +
             'Раскрытие данных - Disclosure of Data\n' +
             'Правовыетребования - Legal Requirements\n' +
-            '«Мой Займ» может раскрывать ваши Личные данные, добросовестно полагая, что такие действия необходимы для:\n' +
+            '«Мой заём» может раскрывать ваши Личные данные, добросовестно полагая, что такие действия необходимы для:\n' +
             '• соблюдать юридическое обязательство\n' +
-            '• Для защиты и защиты прав или собственности «Мой Займ»\n' +
+            '• Для защиты и защиты прав или собственности «Мой заём»\n' +
             '• Для предотвращения или расследования возможных нарушений в связи с использованием Сервиса.\n' +
             '• Для защиты личной безопасности пользователей Сервиса или общественности.\n' +
             '• Защитить от юридической ответственности\n' +
-            '«Мой Займ» may disclose your Personal Data in the good faith belief that such action is necessary to:\n' +
+            '«Мой заём» may disclose your Personal Data in the good faith belief that such action is necessary to:\n' +
             '• To comply with a legal obligation\n' +
-            '• To protect and defend the rights or property of «Мой Займ»\n' +
+            '• To protect and defend the rights or property of «Мой заём»\n' +
             '• To prevent or investigate possible wrongdoing in connection with the Service\n' +
             '• To protect the personal safety of users of the Service or the public\n' +
             '• To protect against legal liability\n' +
@@ -753,16 +753,16 @@ export const doc = [
             'Our Service does not address anyone under the age of 18 ("Children").We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your Child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.\n' +
             'Изменения настоящей политики конфиденциальности - ChangestoThisPrivacyPolicy\n' +
             'Мы можем обновлять нашу Политику конфиденциальности время от времени. Мы сообщим вам о любых изменениях, разместив новую Политику конфиденциальности на этой странице.До того, как изменения вступят в силу, мы сообщим вам об этом по электронной почте и / или в заметном уведомлении о нашем Сервисе и обновим «дату вступления в силу» в верхней части настоящей Политики конфиденциальности.Рекомендуется периодически просматривать настоящую Политику конфиденциальности на предмет любых изменений. Изменения в настоящей Политике конфиденциальности вступают в силу с момента их публикации на этой странице.\n' +
-            'We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page. Пример расчета займа - An example of a body calculation\n' +
-            'Сумма: займа: 1000-50000₽\n' +
-            'Срок займа: позволено 90-365 дней\n' +
-            'В зависимости от срока займа и кредитной истории пользователя, процентная ставка составляет 0,1-1% в день, годовая процентная ставка 36-360%.\n' +
-            'Пример расчета: при займе 50 000₽ на 14 недель (98 дней) по ставке 0,8% в день размер платежа раз в 2 недели составит 10 679,42₽, общая Сумма: выплат - 74 755,94₽\n' +
+            'We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page. Пример расчета заёма - An example of a body calculation\n' +
+            'Сумма: заёма: 1000-50000₽\n' +
+            'Срок заёма: позволено 90-365 дней\n' +
+            'В зависимости от срока заёма и кредитной истории пользователя, процентная ставка составляет 0,1-1% в день, годовая процентная ставка 36-360%.\n' +
+            'Пример расчета: при заёме 50 000₽ на 14 недель (98 дней) по ставке 0,8% в день размер платежа раз в 2 недели составит 10 679,42₽, общая Сумма: выплат - 74 755,94₽\n' +
             'body amount 1000-50000₽\n' +
             'body term: 90-365 days allowed\n' +
             'Depending on the body term and the user\'s credit history, the interest rate is 0.1-1% per day, the annual interest rate is 36-360%.\n' +
             'Example of calculation: for a body of 50,000₽ for 14 weeks (98 days) at the rate of 0.8% per day, the amount of payment once every 2 weeks will be 10,679. 42₽, the total amount of payments-74,755. 94₽\n' +
-            'Данное приложение не выдает займов или кредитов и не является финансовой организацией, банком или кредитором, а только агрегирует банки и МФО, выдающие деньги под проценты наличными, на карту или другими способами и не требует наличия лицензии для ведения такой деятельности.\n' +
+            'Данное приложение не выдает заёмов или кредитов и не является финансовой организацией, банком или кредитором, а только агрегирует банки и МФО, выдающие деньги под проценты наличными, на карту или другими способами и не требует наличия лицензии для ведения такой деятельности.\n' +
             'This application does not issue bodys or bodys and is not a financial institution, Bank or lender, but only aggregates banks and MFIs that issue money at interest in cash, card or other ways and does not require a license to conduct such activities.\n' +
             'Все финансовые компании представленные в приложении внесены в государственный реестр и имеют соответствующие свидетельства выданные ЦБ РФ.\n' +
             'All financial companies presented in the Appendix are included in the state register and have the appropriate certificates issued by the Central Bank of the Russian Federation.\n' +
@@ -784,10 +784,10 @@ export const updComp = [
         title: 'Обновление от 01.11.2022',
         body: [
             {
-                desc: 'Обновлена старница "подбор займа"',
+                desc: 'Обновлена старница "подбор заёма"',
             },
             {
-                desc: 'Добавлена фукция подбор займа',
+                desc: 'Добавлена фукция подбор заёма',
             },
         ],
     },

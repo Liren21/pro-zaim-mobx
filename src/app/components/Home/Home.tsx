@@ -9,7 +9,7 @@ import { CSSTransition } from 'react-transition-group'
 import electivesStore from '../../lib/store/pages/Electives-store'
 import ToastCustom from '../../generic/ToastCustom/ToastCustom'
 import ModalLoader from '../../generic/ModalLoader/ModalLoader'
-import ArrorIcon from '../../generic/icons/ArrorIcon'
+
 
 export default observer(() => {
     const [arr, setArr] = useState([])
@@ -113,7 +113,7 @@ const MyDescr = observer(({ data }: any) => {
             <Row style={{ display: 'inline-block' }}>
                 {data.map((data) => (
                     <Col key={nanoid()} style={{ display: 'inline-block' }} xs={4} sm={4} md={4}>
-                        {data.body}
+                        <div dangerouslySetInnerHTML={{ __html: data.body }} />
                     </Col>
                 ))}
             </Row>
