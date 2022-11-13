@@ -13,27 +13,9 @@ import ServiceCard from "../../generic/ServiceCard/ServiceCard";
 
 
 export default observer(() => {
-    const [arr, setArr] = useState([])
-    const [heart, setHeart] = useState([])
-
     const [showMessage, setShowMessage] = useState(false)
-
     const nodeRef = useRef(null)
 
-    const redirect = (val) => {
-        electivesStore.setLink(val)
-    }
-    const store = localStorage.getItem('id')
-    const storeOne = localStorage.getItem('id')
-    console.log(arr)
-    useEffect(() => {
-        if (store) {
-            setArr(JSON.parse(store))
-        }
-    }, [])
-    useEffect(() => {
-        localStorage.setItem('id', JSON.stringify(arr))
-    })
     useEffect(() => {
         electivesStore.setToastBtn('Займ')
         setShowMessage(true)

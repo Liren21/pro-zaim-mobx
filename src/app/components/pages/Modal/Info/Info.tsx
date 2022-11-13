@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { useState } from 'react'
-import { Button, Modal } from 'react-bootstrap'
-import { observer } from 'mobx-react-lite'
+import {useState} from 'react'
+import {Button, Modal} from 'react-bootstrap'
+import {observer} from 'mobx-react-lite'
 import InfoCard from './InfoCard/InfoCard'
 
 export default observer(() => {
@@ -13,7 +13,7 @@ export default observer(() => {
     return (
         <div className={'info'}>
             <Button
-                style={{ float: 'left', background: '#e7f1ff', color: '#0d6efd' }}
+                style={{float: 'left', background: '#e7f1ff', color: '#0d6efd', borderColor: '#e7f1ff'}}
                 onClick={handleShow}
                 variant="light"
             >
@@ -22,10 +22,10 @@ export default observer(() => {
 
             <Modal centered show={show} onHide={handleClose}>
                 <Modal.Body>
-                    <InfoCard />
-                    <br />
-                    <br />
-                    <Button style={{ float: 'right' }} variant="outline-light" onClick={handleClose}>
+                    <InfoCard/>
+                    <br/>
+                    <br/>
+                    <Button style={{float: 'right'}} variant="outline-light" onClick={handleClose}>
                         Закрыть
                     </Button>
                 </Modal.Body>

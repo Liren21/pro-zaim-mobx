@@ -6,8 +6,8 @@
   width: 70%;
   z-index: 1;
   padding: 0 20px;
-  background: white;
-  box-shadow: 0 5px 14px 1px rgba(34, 60, 80, 0.16);
+  background: #f8f9fa;
+
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 
@@ -16,10 +16,8 @@
     font-size: 1rem;
   }
 
-  .title {
-
-
-
+  .title-right {
+    display: none;
     hr {
       margin: 0;
     }
@@ -31,17 +29,18 @@
 
 
   }
-  .header-btn-hone,.header-btn-calculate,.header-btn-cprofile-offers,.header-btn-upd-comp{
+
+
+
+  .header-btn-hone, .header-btn-calculate, .header-btn-cprofile-offers, .header-btn-upd-comp {
 
   }
-  [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled){
-    border: solid ;
+
+  .fa-heart:before {
+    font-size: 1rem !important;
   }
+
 }
-
-
-
-
 
 
 @media (max-width: 767px) {
@@ -50,8 +49,14 @@
     margin: 0 !important;
     border-radius: 0;
   }
-  .header-btn-hone,.header-btn-calculate{
-    display: none!important;
+  .header-btn-hone, .header-btn-calculate {
+    display: none !important;
+  }
+  .title-left{
+    display: none;
+  }
+  .title-right{
+    display: block!important;
   }
 
 

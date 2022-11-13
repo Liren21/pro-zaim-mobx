@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {observer} from 'mobx-react-lite'
 import './ServiceCard.scss'
 
@@ -6,15 +6,38 @@ import {Button, Card, Col, Row} from 'react-bootstrap'
 import {nanoid} from 'nanoid'
 import electivesStore from '../../lib/store/pages/Electives-store'
 import Info from "../../components/pages/Modal/Info/Info";
+import SearchBtn from "../SearchBtn/SearchBtn";
 
 interface IServiceCard {
     data: any
 }
 
 export default observer(({data}: IServiceCard) => {
+    const store = localStorage.getItem('id')
+    const [arr, setArr] = useState(['Тише', 'мыши', 'кот', 'на', 'крыше']);
+    const [value, setValue] = useState('');
 
+
+    const [arr2, setArr2] = useState([])
+
+    const [heart, setHeart] = useState(false)
     const redirect = (val) => {
         electivesStore.setLink(val)
+    }
+
+    useEffect(() => {
+        if (store) {
+            setArr2(JSON.parse(store))
+        }
+    }, [])
+    useEffect(() => {
+        localStorage.setItem('id', JSON.stringify(arr2))
+    })
+    const safeName = (val) => {
+        setValue(val)
+        setArr([...arr, value])
+        electivesStore.setName(val)
+        setArr2([...arr2, val])
     }
     return (
         <Card key={nanoid()} className={'home'}>
@@ -29,22 +52,35 @@ export default observer(({data}: IServiceCard) => {
                     <div className={'title-card'}>
                         {data.name}
 
-                        {/* {arr.map((kok) => (*/}
-                        {/*    <>*/}
-                        {/*        {kok.id == data.name ? (*/}
-                        {/*            <i*/}
-                        {/*                style={{*/}
-                        {/*                    float: 'right',*/}
-                        {/*                    marginLeft: '1rem',*/}
-                        {/*                    borderColor: 'rgba(255,255,255,0)',*/}
-                        {/*                    borderRadius: '150px',*/}
-                        {/*                }}*/}
-                        {/*                className="fa fa-heart"*/}
-                        {/*                aria-hidden="true"*/}
-                        {/*            />*/}
-                        {/*        ) : null}*/}
-                        {/*    </>*/}
-                        {/* ))}*/}
+                        {/*{heart ? (*/}
+                        {/*    <i*/}
+                        {/*        style={{*/}
+                        {/*            float: 'right',*/}
+                        {/*            marginLeft: '1rem',*/}
+                        {/*            borderColor: 'rgba(255,255,255,0)',*/}
+                        {/*            borderRadius: '150px',*/}
+                        {/*        }}*/}
+                        {/*        className="fa fa-heart"*/}
+                        {/*        aria-hidden="true"*/}
+                        {/*        onClick={() => setHeart(false)}*/}
+                        {/*    />*/}
+                        {/*) : <i*/}
+                        {/*    style={{*/}
+                        {/*        float: 'right',*/}
+                        {/*        marginLeft: '1rem',*/}
+                        {/*        borderColor: 'rgba(255,255,255,0)',*/}
+                        {/*        borderRadius: '150px',*/}
+                        {/*    }}*/}
+                        {/*    className="fa fa-heart-o"*/}
+                        {/*    aria-hidden="true"*/}
+                        {/*    onClick={(event) => {*/}
+                        {/*        setHeart(true)*/}
+                        {/*       safeName(data.name)*/}
+                        {/*    }}*/}
+                        {/*/>*/}
+                        {/*}*/}
+
+                        {/*<SearchBtn data={data.name}/>*/}
                     </div>
                     <MyStat key={nanoid()} data={data.rate}/>
                 </Col>
@@ -75,11 +111,11 @@ export default observer(({data}: IServiceCard) => {
 })
 const MyDescr = observer(({data}: any) => {
     return (
-        <div >
+        <div>
             <Row>
                 {data.map((data) => (
-                    <Col key={nanoid()} style={{display: 'inline-block'}}  md={4} sm={4} xs={4}>
-                        <div style={{fontSize:'12px'}} dangerouslySetInnerHTML={{__html: data.body}}/>
+                    <Col key={nanoid()} style={{display: 'inline-block'}} md={4} sm={4} xs={4}>
+                        <div style={{fontSize: '12px'}} dangerouslySetInnerHTML={{__html: data.body}}/>
                     </Col>
                 ))}
             </Row>
