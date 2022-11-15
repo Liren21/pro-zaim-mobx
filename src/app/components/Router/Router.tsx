@@ -7,6 +7,7 @@ import Home from '../Home/Home'
 import LoanPortfolio from '../pages/LoanPortfolio/LoanPortfolio'
 import profitableOffers from '../pages/ProfitableOffers/ProfitableOffers'
 import UpdateComp from '../pages/UpdateComp/UpdateComp'
+import TechnicalWork from "../pages/TechnicalWork/TechnicalWork";
 
 const Router = observer(() => {
     return (
@@ -16,6 +17,7 @@ const Router = observer(() => {
                 <Route exact path={routes.LOAN_PORTFOLIO} component={LoanPortfolio} />
                 <Route exact path={routes.PROFITABLE_OFFERS} component={profitableOffers} />
                 <Route exact path={routes.UPD_COMP} component={UpdateComp} />
+                <Route exact path={routes.TECHNICAL_WORK} component={TechnicalWork} />
                 <Redirect from="*" to={routes.HOME} />
             </Switch>
         </HashRouter>

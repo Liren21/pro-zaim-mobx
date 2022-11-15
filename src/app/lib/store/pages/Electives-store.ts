@@ -11,6 +11,7 @@ interface IElectivesStore {
     minNumRange: number
     maxNumRange: number
     toastBtn: string
+    technicalWorks:boolean
 }
 
 class ElectivesStore implements IElectivesStore {
@@ -23,6 +24,7 @@ class ElectivesStore implements IElectivesStore {
     stateOffcanvas = false
     stateLoader = false
     stateToastHome = false
+    technicalWorks = true
     stateHeart: [] = []
 
     constructor() {
@@ -52,6 +54,9 @@ class ElectivesStore implements IElectivesStore {
     }
     setStateLoader(val: boolean) {
         this.stateLoader = val
+    }
+    setTechnicalWorks(val: boolean) {
+        this.technicalWorks = val
     }
     setStateHeart(val: []) {
         this.stateHeart = val

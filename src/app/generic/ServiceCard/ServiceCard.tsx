@@ -7,6 +7,7 @@ import {nanoid} from 'nanoid'
 import electivesStore from '../../lib/store/pages/Electives-store'
 import Info from "../../components/pages/Modal/Info/Info";
 import SearchBtn from "../SearchBtn/SearchBtn";
+import routes from "../../lib/routes";
 
 interface IServiceCard {
     data: any
@@ -94,12 +95,13 @@ export default observer(({data}: IServiceCard) => {
                 </Col>
                 <Col key={nanoid()} xs={6} md={6}>
                     <Button
-                        href={data.link}
+                        href={electivesStore.technicalWorks?'#'+routes.TECHNICAL_WORK:data.link}
                         variant={'primary'}
                         className={'home-btn'}
                         onClick={() => {
-                            redirect(data.link)
-                            electivesStore.setStateLoader(true)
+                            // redirect(data.link)
+                            // electivesStore.setStateLoader(true)
+
                         }}
                     >
                         Открыть

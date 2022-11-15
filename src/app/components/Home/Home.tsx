@@ -27,11 +27,9 @@ export default observer(() => {
                 <ModalLoader/>
                 <ToastCustom/> <Row  key={nanoid()}>
                 {data.map((data) => (
-
                     <Col md={6} lg={4} xl={3} style={{paddingBottom:".7rem"}} key={nanoid()}>
                         <ServiceCard data={data}/>
                     </Col>
-
                 ))} </Row>
             </div>
         </CSSTransition>

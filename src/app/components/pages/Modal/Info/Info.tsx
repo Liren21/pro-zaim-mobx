@@ -23,11 +23,6 @@ export default observer(() => {
             <Modal centered show={show} onHide={handleClose}>
                 <Modal.Body>
                     <InfoCard/>
-                    <br/>
-                    <br/>
-                    <Button style={{float: 'right'}} variant="outline-light" onClick={handleClose}>
-                        Закрыть
-                    </Button>
                 </Modal.Body>
             </Modal>
         </div>
