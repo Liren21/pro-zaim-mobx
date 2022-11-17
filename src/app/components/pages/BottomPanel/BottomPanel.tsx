@@ -29,7 +29,7 @@ export default observer(() => {
                             className={
                                 electivesStore.toastBtn == data.title ? 'btn-bottom-panel-active' : 'btn-bottom-panel'
                             }
-                            variant="light"
+                            variant="outline-dark"
                         >
                             <div>
                                 <i className={data.icon} aria-hidden="true" />

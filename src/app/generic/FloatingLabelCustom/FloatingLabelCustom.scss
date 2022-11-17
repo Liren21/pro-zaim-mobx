@@ -1,0 +1,43 @@
+.floating-label-Custom-card, .form-control {
+  display: inline-block;
+  border-radius: 15px;
+  margin: 0 !important;
+  padding: 0 1rem !important;
+  transform: none;
+}
+.floating-label-Custom-card:hover{
+  transform: none;
+}
+
+.mb-3 {
+  margin-bottom: 0 !important;
+}
+
+.form-control {
+  border: none;
+}
+.btn-search{
+  line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
+}
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0);
+  border-color: rgba(181, 25, 24, 0);
+}
+
+
+
+.fa-times:before, .fa-search:before, .fa-times, .fa-search,.fa-trash:before {
+  font-size: 1.2rem;
+  cursor: pointer !important;
+}
+
+.form-floating > .form-control:focus, {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.btn-outline-light{
+  color: black!important;
+  border: none;
+}

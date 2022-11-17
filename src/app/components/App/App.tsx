@@ -12,6 +12,7 @@ import { observer } from 'mobx-react-lite' // the locale you want
 import appStore from '../../../core/lib/store/app'
 import BottomPanel from '../pages/BottomPanel/BottomPanel'
 
+
 export const App = observer((): JSX.Element => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     registerLocale('ru', ru)

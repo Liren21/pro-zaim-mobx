@@ -1,6 +1,6 @@
 body {
   font-family: 'Nunito', sans-serif !important;
-  background-color: #f8f9fa !important;
+  background-color: #ffffff !important;
 }
 
 .btn {
@@ -26,6 +26,7 @@ body {
   padding: 1rem;
   transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
   border: none;
+  box-shadow: 0 2px 2px rgba(154, 160, 185, 0.1), 0 15px 40px rgba(166, 173, 201, 0.1) !important;
 
 
 

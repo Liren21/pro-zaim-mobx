@@ -45,6 +45,7 @@ class ElectivesStore implements IElectivesStore {
     }
     setMinNumRange(val: number) {
         this.minNumRange = val
+        console.log(val)
     }
     setMaxNumRange(val: number) {
         this.maxNumRange = val

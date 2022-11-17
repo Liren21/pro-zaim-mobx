@@ -1,4 +1,6 @@
+// @ts-ignore
 import vebzaim from '../Img/vebzaim.png'
+// @ts-ignore
 import migzaim from '../Img/migzaim.jpg'
 import zaimer from '../Img/zaimer.png'
 import cashu from '../Img/cashu.png'

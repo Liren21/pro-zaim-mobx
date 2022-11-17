@@ -1,12 +1,15 @@
-
+/*
+ * Copyright (c) Kolyada Nikita Vladimirovich <nikita.nk16@yandex.ru>  23.08.2021, 16:55
+ */
 
 import './FormControlApp.scss'
-import React, { useState } from 'react'
-import { Form } from 'react-bootstrap'
-import { IFormControlAppProps, init } from './extensions/form-control-app'
+import React, {useState} from 'react'
+import {Form, FormControl, InputGroup} from 'react-bootstrap'
+import {IFormControlAppProps, init} from './extensions/form-control-app'
 import validateForm from './extensions/validation-control-app'
 import DatePickerApp from '../DatePickerApp/DatePickerApp'
 import Select from 'react-select'
+
 
 const FormControlApp = (props: IFormControlAppProps): JSX.Element => {
     const initState = init(props)
@@ -14,9 +17,13 @@ const FormControlApp = (props: IFormControlAppProps): JSX.Element => {
     const [isInvalid, setIsInvalid] = useState(undefined)
 
     const onChange = (val) => {
-        const value = val.currentTarget ? val.currentTarget.value : val
+        let value = val && val.currentTarget ? val.currentTarget.value : val
 
-        const errors = validateForm({
+        if (initState.type === 'number') {
+            value = Number(value)
+        }
+
+        const propsValidate = {
             value: value,
             type: initState.type,
             minLength: initState.minLength,
@@ -26,12 +33,17 @@ const FormControlApp = (props: IFormControlAppProps): JSX.Element => {
             pattern: initState.pattern,
             required: initState.required,
             patternError: initState.patternError,
-        })
 
-        setValidErrors(errors)
-        setIsInvalid(errors.length > 0)
+        }
 
-        initState.onChange(value)
+        const errors = validateForm(propsValidate)
+
+        if (props.as !== 'select') {
+            setValidErrors(errors)
+            setIsInvalid(errors.length > 0 ? false : undefined)
+        }
+
+        initState.onChange(propsValidate.value)
     }
 
     return (
@@ -39,66 +51,60 @@ const FormControlApp = (props: IFormControlAppProps): JSX.Element => {
             {initState.label ? (
                 <Form.Label className={initState.classesLabel}>
                     {initState.label}
-                    {initState.required ? <span style={{ color: 'darkred' }}>*</span> : null}
+                    {initState.required ? <span style={{color: 'darkred'}}>*</span> : null}
                 </Form.Label>
             ) : null}
             {initState.type === 'date' ? (
-                <DatePickerApp
-                    id={initState.id}
-                    type={initState.type}
-                    style={initState.style}
-                    required={initState.required}
-                    onChange={onChange}
-                    classes={initState.classesInput}
-                    selected={String(initState.value)}
-                    minDate={String(initState.minValue)}
-                    maxDate={String(initState.maxValue)}
-                    disabled={initState.disabled}
-                    isInvalid={isInvalid}
-                />
+                <div className={'bok'}>
+                    <InputGroup className={'kol'}>
+                        <DatePickerApp
+                            classes={'fol'}
+                            id={initState.id}
+                            type={initState.type}
+                            style={initState.style}
+                            required={initState.required}
+                            onChange={onChange}
+                            selected={String(initState.value)}
+                            minDate={String(initState.minValue)}
+                            maxDate={String(initState.maxValue)}
+                            disabled={initState.disabled}
+                            isInvalid={isInvalid}
+                        />
+
+                    </InputGroup>
+                    <br/>
+                </div>
             ) : initState.as === 'select' ? (
                 <Select
                     id={initState.id}
                     key={initState.id}
                     onChange={onChange}
                     type={initState.type}
-                    isInvalid={isInvalid}
+                    // isInvalid={isInvalid}
                     value={initState.value}
                     style={initState.style}
-                    options={initState.options}
                     required={initState.required}
                     disabled={initState.disabled}
                     defaultValue={initState.value}
                     autoFocus={initState.autoFocus}
                     className={initState.classesInput}
                     placeholder={initState.placeholder}
+                    options={initState.selectProps.options}
                     isMulti={initState.selectProps.isMulti}
                     isClearable={initState.selectProps.isClearable}
                     noOptionsMessage={() => initState.emptyMessage}
-                    isValid={isInvalid === undefined ? isInvalid : !isInvalid}
+                    // isValid={isInvalid === undefined ? isInvalid : !isInvalid}
                     closeMenuOnSelect={initState.selectProps.closeMenuOnSelect}
                 />
             ) : (
-                <Form.Control
-                    id={initState.id}
-                    as={initState.as}
-                    key={initState.id}
-                    type={initState.type}
-                    autoFocus={initState.autoFocus}
-                    style={initState.style}
-                    rows={initState.rows}
-                    required={initState.required}
-                    placeholder={initState.placeholder}
-                    onChange={onChange}
-                    onBlur={onChange}
-                    min={initState.minValue}
-                    max={initState.maxValue}
-                    classes={initState.classesInput}
-                    value={initState.value}
-                    disabled={initState.disabled}
-                    isInvalid={isInvalid}
-                    isValid={isInvalid === undefined ? isInvalid : !isInvalid}
-                />
+                <div>
+                    <InputGroup className={'mb'}>
+                        <FormControl type={initState.type} value={initState.value} onChange={onChange} id={initState.id}
+                                     placeholder={initState.placeholder}/>
+                    </InputGroup>
+                    <br/>
+                </div>
+
             )}
 
             {/* <Form.Control.Feedback type="invalid">Please provide a valid state.</Form.Control.Feedback>*/}

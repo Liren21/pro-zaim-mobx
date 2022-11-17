@@ -9,12 +9,14 @@ import { CSSTransition } from 'react-transition-group'
 
 import { bestIdea } from '../../../generic/Data/DataCard'
 import ToastCustom from '../../../generic/ToastCustom/ToastCustom'
+import electivesStore from "../../../lib/store/pages/Electives-store";
 
 export default observer(() => {
     const [showMessage, setShowMessage] = useState(false)
     const nodeRef = useRef(null)
 
     useEffect(() => {
+        electivesStore.setToastBtn('')
         setShowMessage(true)
     }, [])
     return (

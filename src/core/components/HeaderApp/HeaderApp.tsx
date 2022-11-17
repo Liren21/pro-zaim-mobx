@@ -1,12 +1,11 @@
 // eslint-disable-next-line prettier/prettier
 import * as React from 'react'
-import {Button, Nav, Navbar, Offcanvas} from 'react-bootstrap'
+import { Nav, Navbar, Offcanvas} from 'react-bootstrap'
 import { observer } from 'mobx-react-lite'
 import './HeaderApp.scss'
 import Scrollbar from 'react-scrollbars-custom'
 import routes from '../../../app/lib/routes'
-import Icons from '../../../app/generic/Img/Icon.svg'
-import SearchBtn from "../../../app/generic/SearchBtn/SearchBtn";
+
 const HeaderApp = observer(() => {
     return (
         <Scrollbar>
