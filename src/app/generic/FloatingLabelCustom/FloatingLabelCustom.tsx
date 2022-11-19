@@ -2,6 +2,7 @@ import {Button, Card, Col, FloatingLabel, Form, Row} from 'react-bootstrap'
 import {observer} from 'mobx-react-lite'
 import './FloatingLabelCustom.scss'
 import React from 'react'
+import { Search, Trash} from "react-bootstrap-icons";
 
 interface IFloatingLabelCustom {
     value: any
@@ -40,16 +41,13 @@ export default observer(({value, onChange, onclickBtn, onclickBtnSecond, label, 
                 >
                     <Button onClick={onclickBtnSecond} style={{display: 'inline-block'}} title={'Поиск'}
                             variant={"outline-light"}>
-
-                        <i className="fa fa-trash"
-                           aria-hidden="true"/>
+                        <Trash className={'icons'}  />
 
                     </Button>
                     <Button style={{display: 'inline-block'}} onClick={onclickBtn} title={'Поиск'}
                             variant={"outline-light"}>
 
-                        <i className="fa fa-search"
-                           aria-hidden="true"/>
+                        <Search className={'icons'} />
 
                     </Button>
                 </Col>

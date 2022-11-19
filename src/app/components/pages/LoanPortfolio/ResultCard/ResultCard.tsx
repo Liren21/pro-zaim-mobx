@@ -11,6 +11,7 @@ import ServiceCard from "../../../../generic/ServiceCard/ServiceCard";
 
 export default observer(() => {
     const [heart, setHeart] = useState(false)
+    const [mes, setMes] = useState(false)
     const redirect = (val) => {
         electivesStore.setLink(val)
     }
@@ -24,8 +25,8 @@ export default observer(() => {
             <Row>
                 {data.map((data) => (
                     data.min - 1 > electivesStore.minNumRange ?
-                        null :
-
+                        null
+                        :
                         <Col key={nanoid()} md={3}>
                             <ServiceCard data={data} key={nanoid()}/>
                         </Col>
