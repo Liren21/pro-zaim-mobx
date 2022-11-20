@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import {observer} from 'mobx-react-lite'
 import './Home.scss'
 import {data} from '../../generic/Data/DataCard'
-import {Col, Row} from 'react-bootstrap'
+import {Alert, Col, Row} from 'react-bootstrap'
 
 import {nanoid} from 'nanoid'
 import {CSSTransition} from 'react-transition-group'
@@ -26,6 +26,9 @@ export default observer(() => {
             <div ref={nodeRef} style={{display: 'inline-block'}}>
                 <ModalLoader/>
                 <ToastCustom/> <Row  key={nanoid()}>
+                <Alert style={{border:'none',borderRadius:'12px'}} key={nanoid()} variant={'success'}>
+                   Рекомендуем займы на выгодных условия
+                </Alert>
                 {data.map((data) => (
                     <Col md={6} lg={4} xl={3} style={{paddingBottom:".7rem"}} key={nanoid()}>
                         <ServiceCard data={data}/>

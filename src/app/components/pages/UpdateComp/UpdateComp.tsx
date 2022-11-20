@@ -1,12 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { observer } from 'mobx-react-lite'
 import './UpdateComp.scss'
-
 import { Card, ListGroup } from 'react-bootstrap'
-
 import { nanoid } from 'nanoid'
 import { CSSTransition } from 'react-transition-group'
-
 import { updComp } from '../../../generic/Data/DataCard'
 import ToastCustom from '../../../generic/ToastCustom/ToastCustom'
 import electivesStore from "../../../lib/store/pages/Electives-store";
@@ -16,7 +13,7 @@ export default observer(() => {
     const nodeRef = useRef(null)
 
     useEffect(() => {
-        electivesStore.setToastBtn('')
+        electivesStore.setToastBtn('Что нового')
         setShowMessage(true)
     }, [])
     return (

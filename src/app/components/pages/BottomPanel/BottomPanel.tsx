@@ -24,7 +24,6 @@ export default observer(() => {
         {
             name: 'Еще',
             icon: <ThreeDots className={'icons'}/>,
-            btn: true,
             open: true,
             close: false,
 
@@ -38,10 +37,7 @@ export default observer(() => {
                         {
                             data.title ? <Button
                                     href={data.href}
-                                    className={
-                                        electivesStore.toastBtn == data.title ? 'btn-bottom-panel-active' : 'btn-bottom-panel'
-                                    }
-                                    variant="outline-dark"
+                                    variant={  electivesStore.toastBtn == data.title ?'dark':'outline-dark'}
                                 >
                                     <div>
                                         <i className="bi bi-bar-chart-line"></i>
@@ -50,8 +46,7 @@ export default observer(() => {
                                     {data.title}
                                 </Button>
                                 :
-                                <CustomOffcanvas icon={data.icon} btn={data.btn} title={data.name} open={data.open}
-                                                 close={data.close}/>
+                                <CustomOffcanvas  icon={data.icon}  title={data.name}/>
                         }
                     </Col>
                 ))}
