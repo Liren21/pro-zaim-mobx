@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import {observer} from 'mobx-react-lite'
 import {Col, Row} from 'react-bootstrap'
 import {nanoid} from 'nanoid'
@@ -10,11 +10,7 @@ import ModalLoader from '../../../../generic/ModalLoader/ModalLoader'
 import ServiceCard from "../../../../generic/ServiceCard/ServiceCard";
 
 export default observer(() => {
-    const [heart, setHeart] = useState(false)
-    const [mes, setMes] = useState(false)
-    const redirect = (val) => {
-        electivesStore.setLink(val)
-    }
+
     useEffect(() => {
         electivesStore.setToastBtn('Калькулятор')
         electivesStore.setStateLoader(false)

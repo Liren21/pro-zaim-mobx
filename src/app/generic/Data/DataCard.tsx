@@ -37,10 +37,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`],
             },
             {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>    30 дн`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -60,10 +60,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`],
             },
             {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 5 дн`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -83,10 +83,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 2к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`],
             },
             {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 65 дн`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -106,10 +106,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -129,10 +129,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`],
             },
             {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 7 дн`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -152,10 +152,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`],
             },
             {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 1 дня`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -172,13 +172,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`],
             },
             {
-                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 10 дн`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -198,10 +198,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -221,10 +221,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 2к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -244,10 +244,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 100 руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`],
             },
             {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 7 дн`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -267,10 +267,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 2к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -290,10 +290,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 4к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -313,10 +313,10 @@ export const data = [
                 body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 2к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`],
             },
             {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 7 дн`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -333,13 +333,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
             },
             {
-               body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 5 дн`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -356,13 +356,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -379,13 +379,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   1-21 дня`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`],
             },
         ],
         rate: [
@@ -402,13 +402,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p> 1-21 дня`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`],
             },
         ],
         rate: [
@@ -425,13 +425,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 1 дня`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`],
             },
         ],
         rate: [
@@ -448,13 +448,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
             },
             {
-             body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   1%`],
             },
         ],
         rate: [
@@ -471,13 +471,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0.6%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0.6%`],
             },
             {
-                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 1 дня`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -494,13 +494,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-             body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
             },
             {
-               body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 5 дн`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -517,13 +517,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-             body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
             },
             {
-                  body: [`<p style="color: rgba(0,0,0,0.5)">Срок:</p>   от 1 дня`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
             },
         ],
         rate: [
@@ -540,13 +540,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`],
             },
         ],
         rate: [
@@ -563,13 +563,13 @@ export const data = [
         min: 1000,
         descr: [
             {
-             body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
             },
             {
-               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`],
             },
         ],
         rate: [
@@ -586,13 +586,13 @@ export const data = [
         min: 3000,
         descr: [
             {
-               body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
+                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
             },
             {
-               body:[`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
             },
             {
-                body:[`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`] ,
+                body: [`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`],
             },
         ],
         rate: [

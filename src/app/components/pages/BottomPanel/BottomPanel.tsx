@@ -37,7 +37,7 @@ export default observer(() => {
                         {
                             data.title ? <Button
                                     href={data.href}
-                                    variant={  electivesStore.toastBtn == data.title ?'dark':'outline-dark'}
+                                    variant={  electivesStore.toastBtn == data.title ?'primary':'outline-primary'}
                                 >
                                     <div>
                                         <i className="bi bi-bar-chart-line"></i>

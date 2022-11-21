@@ -26,7 +26,7 @@ export default observer(() => {
             <div ref={nodeRef} style={{display: 'inline-block'}}>
                 <ModalLoader/>
                 <ToastCustom/> <Row  key={nanoid()}>
-                <Alert style={{border:'none',borderRadius:'12px'}} key={nanoid()} variant={'success'}>
+                <Alert style={{border:'none',borderRadius:'12px',textAlign:'center'}} key={nanoid()} variant={'success'}>
                    Рекомендуем займы на выгодных условия
                 </Alert>
                 {data.map((data) => (

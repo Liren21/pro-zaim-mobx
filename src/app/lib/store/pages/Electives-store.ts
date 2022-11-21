@@ -24,7 +24,7 @@ class ElectivesStore implements IElectivesStore {
     stateOffcanvas = false
     stateLoader = false
     stateToastHome = false
-    technicalWorks = true
+    technicalWorks = false
     stateHeart: [] = []
 
     constructor() {

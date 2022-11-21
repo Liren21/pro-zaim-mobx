@@ -98,8 +98,8 @@ export default observer(({data}: IServiceCard) => {
                         variant={'primary'}
                         className={'home-btn'}
                         onClick={() => {
-                            // redirect(data.link)
-                            // electivesStore.setStateLoader(true)
+                            redirect(data.link)
+                            electivesStore.setStateLoader(true)
 
                         }}
                     >
