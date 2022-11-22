@@ -12,6 +12,7 @@ import ModalLoader from '../../generic/ModalLoader/ModalLoader'
 import ServiceCard from "../../generic/ServiceCard/ServiceCard";
 
 
+
 export default observer(() => {
     const [showMessage, setShowMessage] = useState(false)
     const nodeRef = useRef(null)
@@ -21,20 +22,31 @@ export default observer(() => {
         setShowMessage(true)
         electivesStore.setStateLoader(false)
     }, [])
+
     return (
         <CSSTransition in={showMessage} nodeRef={nodeRef} timeout={300} classNames="alert" unmountOnExit>
             <div ref={nodeRef} style={{display: 'inline-block'}}>
                 <ModalLoader/>
-                <ToastCustom/> <Row  key={nanoid()}>
-                <Alert style={{border:'none',borderRadius:'12px',textAlign:'center'}} key={nanoid()} variant={'success'}>
-                   Рекомендуем займы на выгодных условия
-                </Alert>
-                {data.map((data) => (
-                    <Col md={6} lg={4} xl={3} style={{paddingBottom:".7rem"}} key={nanoid()}>
-                        <ServiceCard data={data}/>
-                    </Col>
-                ))} </Row>
-            </div>
-        </CSSTransition>
-    )
-})
+                <ToastCustom/>
+
+                <Row key={nanoid()}>
+
+
+                    <Alert style={{border: 'none', borderRadius: '12px', textAlign: 'center'}} key={nanoid()}
+                           variant={'success'}>
+                        Рекомендуем займы на выгодных условия
+                    </Alert>
+                    {data.map((data) => (
+
+                        <Col key={nanoid()} md={6} lg={4} xl={3} style={{paddingBottom: ".7rem"}}>
+
+                            <ServiceCard data={data}/>
+                        </Col>
+
+                            ))}
+
+                        </Row>
+                        </div>
+                        </CSSTransition>
+                        )
+                    })

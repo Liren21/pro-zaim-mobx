@@ -3,6 +3,7 @@ import { makeAutoObservable } from 'mobx'
 interface IElectivesStore {
     link: string
     name: string
+    search: string
     stateOffcanvas: boolean
     stateLoader: boolean
     stateToastHome: boolean
@@ -17,6 +18,7 @@ interface IElectivesStore {
 class ElectivesStore implements IElectivesStore {
     link = ''
     name = ''
+    search = ''
     messageToastHome = ''
     toastBtn = ''
     minNumRange = 0
@@ -36,6 +38,9 @@ class ElectivesStore implements IElectivesStore {
     }
     setName(val: string) {
         this.name = val
+    }
+    setSearch(val: string) {
+        this.search = val
     }
     setMessageToastHome(val: string) {
         this.messageToastHome = val

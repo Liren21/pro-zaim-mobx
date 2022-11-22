@@ -13,7 +13,7 @@ import FloatingLabelCustom from "../../../generic/FloatingLabelCustom/FloatingLa
 export default observer(() => {
     const [showMessage, setShowMessage] = useState(false)
     const [mes, setMec] = useState('')
-    console.log(mes)
+
     const nodeRef = useRef(null)
     const changeVal = (value) => {
         if (value == 0) {
@@ -36,7 +36,7 @@ export default observer(() => {
                     <br/>
                     <Card.Title> Калькулятор выбора займа</Card.Title>
                     <Alert key={'primary'} variant={'light'} className={'loan-portfolio-text'}>
-                        Калькулято предоставляет наилучший выбор МФО для займа
+                        Калькулятор предоставляет наилучший выбор МФО для займа
                     </Alert>
                     <br/>
                     <br/>

@@ -6,7 +6,7 @@ import './HeaderApp.scss'
 import Scrollbar from 'react-scrollbars-custom'
 import routes from '../../../app/lib/routes'
 
-import {Calculator, CashCoin, Collection, QuestionSquare, Wallet2} from "react-bootstrap-icons";
+import {Calculator, CashCoin, Collection, QuestionSquare} from "react-bootstrap-icons";
 
 const HeaderApp = observer(() => {
     return (
@@ -42,7 +42,7 @@ const HeaderApp = observer(() => {
                     {/*<Button variant="light"><i className="fa fa-heart" aria-hidden="true"></i> Избранные</Button>{' '}*/}
                 </Navbar.Brand>
                     <Navbar.Brand className={'title-right'} href={'#'+routes.HOME}>
-                        <Wallet2 style={{color:'red'}} className={'icons'}/>  Pro zайм
+                        Pro zайм
                         {/*<Button variant="light"><i className="fa fa-heart" aria-hidden="true"></i> Избранные</Button>{' '}*/}
                     </Navbar.Brand>
 

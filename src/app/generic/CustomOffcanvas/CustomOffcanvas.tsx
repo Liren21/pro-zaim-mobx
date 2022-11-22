@@ -3,7 +3,6 @@ import {observer} from 'mobx-react-lite'
 import {Button, Nav, Offcanvas} from 'react-bootstrap'
 import {
     CashCoin,
-    EnvelopeCheck,
     QuestionCircle
 } from "react-bootstrap-icons";
 import routes from "../../lib/routes";
@@ -31,11 +30,11 @@ export default observer(({title, icon}: ICOffcanvas) => {
             href: '#' + routes.UPD_COMP,
             icon: <QuestionCircle className={'icons'}/>,
         },
-        {
-            title: ' Связь с разработчиком',
-            href: '#' + routes.RAPPORT,
-            icon: <EnvelopeCheck className={'icons'}/>,
-        },
+        // {
+        //     title: ' Связь с разработчиком',
+        //     href: '#' + routes.RAPPORT,
+        //     icon: <EnvelopeCheck className={'icons'}/>,
+        // },
     ]
     return (
         <>
@@ -54,7 +53,7 @@ export default observer(({title, icon}: ICOffcanvas) => {
                     <Nav className="justify-content-start flex-grow-1 pe-3">
                         {
                             data.map((d) => (
-                                <Button key={nanoid()} variant={'outline-dark'} href={d.href}>
+                                <Button key={nanoid()} onClick={handleClose} variant={'outline-dark'} href={d.href}>
                                     {d.icon}
                                     {d.title}
                                 </Button>
