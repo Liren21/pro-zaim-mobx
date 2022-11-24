@@ -1,4 +1,4 @@
-import { makeAutoObservable } from 'mobx'
+import {makeAutoObservable} from 'mobx'
 
 interface IElectivesStore {
     link: string
@@ -12,7 +12,8 @@ interface IElectivesStore {
     minNumRange: number
     maxNumRange: number
     toastBtn: string
-    technicalWorks:boolean
+    technicalWorks: boolean
+    stateToast: boolean
 }
 
 class ElectivesStore implements IElectivesStore {
@@ -26,47 +27,62 @@ class ElectivesStore implements IElectivesStore {
     stateOffcanvas = false
     stateLoader = false
     stateToastHome = false
-    technicalWorks = false
+    technicalWorks = true
+    stateToast = false
     stateHeart: [] = []
 
     constructor() {
-        makeAutoObservable(this, {}, { deep: true })
+        makeAutoObservable(this, {}, {deep: true})
     }
 
     setLink(val: string) {
         this.link = val
     }
+
     setName(val: string) {
         this.name = val
     }
+
     setSearch(val: string) {
         this.search = val
     }
+
     setMessageToastHome(val: string) {
         this.messageToastHome = val
     }
+
     setToastBtn(val: string) {
         this.toastBtn = val
     }
+
     setMinNumRange(val: number) {
         this.minNumRange = val
-        console.log(val)
     }
+
     setMaxNumRange(val: number) {
         this.maxNumRange = val
     }
+
     setStateToastHome(val: boolean) {
         this.stateToastHome = val
     }
+
+    setStateToast(val: boolean) {
+        this.stateToast = val
+    }
+
     setStateLoader(val: boolean) {
         this.stateLoader = val
     }
+
     setTechnicalWorks(val: boolean) {
         this.technicalWorks = val
     }
+
     setStateHeart(val: []) {
         this.stateHeart = val
     }
+
     // redirectLink() {
     //
     //     service.getStudentsById()

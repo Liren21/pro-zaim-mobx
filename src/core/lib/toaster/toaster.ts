@@ -11,8 +11,8 @@ import './toaster.scss'
  * Dont set this file!!!
  */
 const fade = cssTransition({
-    enter: 'animate__fadeInDown',
-    exit: 'animate__fadeOutUp',
+    enter: 'animate__fadeInRight',
+    exit: 'animate__fadeOutRight',
 })
 
 interface IToaster {

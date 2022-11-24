@@ -4,12 +4,22 @@
   font-weight: bold;
 
   .toast-style {
-    border-radius: 10px !important;
+    border-radius: 15px !important;
   }
 
   .Toastify__toast--warning {
     background: #eab107 !important;
+    margin-bottom: 1rem;
   }
+}
+
+.Toastify__toast-container--top-left, .Toastify__toast-container--top-center, .Toastify__toast-container--top-right {
+  top: 1rem;
+  color: #000000b0;
+}
+
+.Toastify__close-button {
+  color: #000000b0;
 }
 
 @keyframes show-in-fwd {

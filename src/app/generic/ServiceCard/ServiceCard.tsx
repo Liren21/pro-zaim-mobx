@@ -94,14 +94,16 @@ export default observer(({data}: IServiceCard) => {
                 </Col>
                 <Col key={nanoid()} xs={6} md={6}>
                     <Button
-                        href={electivesStore.technicalWorks?'#'+routes.TECHNICAL_WORK:data.link}
+                        href={electivesStore.technicalWorks ? '#' + routes.TECHNICAL_WORK : data.link}
                         variant={'primary'}
                         className={'home-btn'}
-                        onClick={() => {
-                            redirect(data.link)
-                            electivesStore.setStateLoader(true)
-
-                        }}
+                        onClick={electivesStore.technicalWorks ?
+                            null
+                            :
+                            () => {
+                                redirect(data.link)
+                                electivesStore.setStateLoader(true)
+                            }}
                     >
                         Открыть
                     </Button>

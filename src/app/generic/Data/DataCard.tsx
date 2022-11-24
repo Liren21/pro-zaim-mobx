@@ -605,7 +605,7 @@ export const data = [
 ]
 export const dataInsideCard = [
     {
-        header: 'Условие',
+        header: 'Условия',
         inside: [
             {
                 img: 'Рассмотрение заявки',
@@ -651,7 +651,7 @@ export const dataInsideCard = [
         ],
     },
     {
-        header: 'Необходимые кументы',
+        header: 'Необходимые документы',
         inside: [
             {
                 body: 'Заявление-анкета',

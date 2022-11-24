@@ -8,8 +8,6 @@ import {data} from '../../../../generic/Data/DataCard'
 import './ResultCard.scss'
 import ModalLoader from '../../../../generic/ModalLoader/ModalLoader'
 import ServiceCard from "../../../../generic/ServiceCard/ServiceCard";
-// import Toaster from "../../../../../core/lib/toaster/toaster";
-// import {toast} from "react-toastify";
 
 export default observer(() => {
 
@@ -17,16 +15,14 @@ export default observer(() => {
         electivesStore.setToastBtn('Калькулятор')
         electivesStore.setStateLoader(false)
     }, [])
-    // const name = () => {
-    //     new Toaster({msg:'1212',type:toast.TYPE.ERROR})
-    // }
+
     return (
         <>
             <ModalLoader/>
             <Row>
                 {data.map((data) => (
                     data.min - 1 > electivesStore.minNumRange ?
-                       null
+                        null
                         :
                         <Col key={nanoid()} md={3}>
                             <ServiceCard data={data} key={nanoid()}/>
