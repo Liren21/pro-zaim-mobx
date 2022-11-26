@@ -18,24 +18,15 @@
   display: inline-block !important;
 
 }
-.btn-bottom-panel-active{
-  border-radius: 10px;
-  display: inline-block !important;
-  color: #0d6dfb;
-}
-.btn-outline-dark,.btn-outline-primary{
-  border:none;
-}
+
 
 .fa-credit-card:before,.fa-bar-chart-o:before, .fa-bar-chart:before,.fa-heart-o:before,.fa-flash::before, .fa-bolt::before,.fa-warning:before, .fa-exclamation-triangle:before{
-  font-size: 1.2rem!important;
+  font-size: 1.5rem!important;
 }
 .icons{
-  font-size: 1.2rem!important;
+  font-size: 1.7rem!important;
 }
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
-  color: #0d6dfb;
-}
+
 @media  (max-width: 767px) {
   .bottom-panel {
     display: inline-block!important;

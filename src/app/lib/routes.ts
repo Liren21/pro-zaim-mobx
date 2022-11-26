@@ -5,5 +5,6 @@ export default {
     PROFITABLE_OFFERS: '/profitable_offers',
     UPD_COMP: '/update',
     TECHNICAL_WORK:'/technical_works',
-    RAPPORT:'/rapport'
+    RAPPORT:'/rapport',
+    NOTIFICATION:'/notification',
 }

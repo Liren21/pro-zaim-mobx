@@ -22,11 +22,16 @@ export default observer(() => {
         electivesStore.setStateLoader(false)
     }, [])
 
+    // const filterVal = data.filter(val => {
+    //     return val.name.toLowerCase().includes(value.toLowerCase())
+    // })
+
     return (
         <CSSTransition in={showMessage} nodeRef={nodeRef} timeout={300} classNames="alert" unmountOnExit>
             <div ref={nodeRef} style={{display: 'inline-block'}}>
                 <ModalLoader/>
                 <ToastCustom/>
+
 
                 <Row key={nanoid()}>
                     <Alert style={{border: 'none', borderRadius: '12px', textAlign: 'center'}} key={nanoid()}

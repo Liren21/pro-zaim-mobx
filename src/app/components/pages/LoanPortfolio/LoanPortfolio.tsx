@@ -1,6 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react'
 import {Alert, Card,} from 'react-bootstrap'
-import {CSSTransition} from 'react-transition-group'
 import './LoanPortfolio.scss'
 import {observer} from 'mobx-react-lite'
 import electivesStore from '../../../lib/store/pages/Electives-store'
@@ -9,6 +8,7 @@ import ResultCard from './ResultCard/ResultCard'
 import FloatingLabelCustom from "../../../generic/FloatingLabelCustom/FloatingLabelCustom";
 import Toaster from "../../../../core/lib/toaster/toaster";
 import {toast} from "react-toastify";
+import {AnimationEffect} from "../../../generic/AnimationEffect/AnimationEffect";
 
 
 export default observer(() => {
@@ -37,22 +37,20 @@ export default observer(() => {
     }, [])
 
     return (
-        <CSSTransition in={showMessage} nodeRef={nodeRef} timeout={300} classNames="alert" unmountOnExit>
-            <div ref={nodeRef}>
-                <Card.Body>
-                    <br/>
-                    <Card.Title> Калькулятор выбора займа</Card.Title>
-                    <Alert key={'primary'} variant={'light'} className={'loan-portfolio-text'}>
-                        Калькулятор предоставляет наилучший выбор МФО для займа
-                    </Alert>
-                    <br/>
-                    <br/>
-                    <FloatingLabelCustom type={'tel'} onclickBtn={clickNum} onclickBtnSecond={clickNumSec}
-                                         label={'Сумма до'} value={mes}
-                                         onChange={(value) => changeVal(value.target.value)}/>
-                    <ResultCard/>
-                </Card.Body>
-            </div>
-        </CSSTransition>
+        <AnimationEffect>
+            <Card.Body>
+                <br/>
+                <Card.Title> Калькулятор выбора займа</Card.Title>
+                <Alert key={'primary'} variant={'light'} className={'loan-portfolio-text'}>
+                    Калькулятор предоставляет наилучший выбор МФО для займа
+                </Alert>
+                <br/>
+                <br/>
+                <FloatingLabelCustom type={'tel'} onclickBtn={clickNum} onclickBtnSecond={clickNumSec}
+                                     label={'Сумма до'} value={mes}
+                                     onChange={(value) => changeVal(value.target.value)}/>
+                <ResultCard/>
+            </Card.Body>
+        </AnimationEffect>
     )
 })

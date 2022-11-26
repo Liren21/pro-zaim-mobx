@@ -14,7 +14,7 @@ interface ICOffcanvas {
     icon: any
 }
 
-export default observer(({title, icon}: ICOffcanvas) => {
+export default observer(({ icon}: ICOffcanvas) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -38,11 +38,9 @@ export default observer(({title, icon}: ICOffcanvas) => {
     ]
     return (
         <>
-            <Button variant="outline-primary" onClick={handleShow}>
+            <Button variant="outline-secondary" onClick={handleShow}>
                 {icon}
-                <div>
-                    {title}
-                </div>
+
             </Button>
 
             <Offcanvas show={show} placement={'end'} onHide={handleClose}>

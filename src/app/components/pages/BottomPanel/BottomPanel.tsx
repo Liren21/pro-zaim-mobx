@@ -5,48 +5,64 @@ import {Button, Col, Row} from 'react-bootstrap'
 import routes from '../../../lib/routes'
 import {nanoid} from 'nanoid'
 import electivesStore from '../../../lib/store/pages/Electives-store'
-import {Calculator, Collection, ThreeDots} from 'react-bootstrap-icons';
+import {
+    Bell,
+    BellFill,
+    Calculator,
+    CalculatorFill,
+     HandThumbsUp, HandThumbsUpFill,
+    House,
+    HouseFill,
+} from 'react-bootstrap-icons';
 import CustomOffcanvas from "../../../generic/CustomOffcanvas/CustomOffcanvas";
+
 
 
 export default observer(() => {
     const btnForm = [
         {
             title: 'Займ',
-            icon: <Collection className={'icons'}/>,
+            icon: <House className={'icons'}/>,
+            iconAlt: <HouseFill className={'icons'}/>,
             href: '#' + routes.HOME,
         },
         {
             title: 'Калькулятор',
             icon: <Calculator className={'icons'}/>,
+            iconAlt: <CalculatorFill className={'icons'}/>,
             href: '#' + routes.LOAN_PORTFOLIO,
         },
         {
-            name: 'Еще',
-            icon: <ThreeDots className={'icons'}/>,
-            open: true,
-            close: false,
-
+            title: 'Уведомление',
+            icon: <Bell className={'icons'}/>,
+            iconAlt: <BellFill className={'icons'}/>,
+            href: '#' + routes.NOTIFICATION,
+        },
+        {
+            title: 'Выгодные предложения',
+            icon: <HandThumbsUp className={'icons'}/>,
+            iconAlt: <HandThumbsUpFill className={'icons'}/>,
+            href: '#' + routes.PROFITABLE_OFFERS,
         },
     ]
     return (
         <div className={'bottom-panel'}>
-            <Row style={{display: 'inline-block'}}>
+            <Row>
                 {btnForm.map((data) => (
-                    <Col key={nanoid()} md={4} sm={4} xs={4} style={{display: 'inline-block'}}>
+                    <Col key={nanoid()} md={3} sm={3} xs={3} >
                         {
                             data.title ? <Button
                                     href={data.href}
-                                    variant={  electivesStore.toastBtn == data.title ?'primary':'outline-primary'}
+                                    variant={electivesStore.toastBtn == data.title ? 'outline-primary' : 'outline-secondary'}
                                 >
                                     <div>
                                         <i className="bi bi-bar-chart-line"></i>
-                                        {data.icon}
+                                        {electivesStore.toastBtn !== data.title ? data.icon : data.iconAlt}
                                     </div>
-                                    {data.title}
+                                    {/*{data.title}*/}
                                 </Button>
                                 :
-                                <CustomOffcanvas  icon={data.icon}  title={data.name}/>
+                                <CustomOffcanvas icon={data.icon} title={data.name}/>
                         }
                     </Col>
                 ))}

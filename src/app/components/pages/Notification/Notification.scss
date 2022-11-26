@@ -1,0 +1,27 @@
+.notification-card{
+  margin: 0!important;
+  padding: 0!important;
+  box-shadow:none!important;
+
+}
+.notification-card:hover{
+  transform: none;
+}
+.circle-success {
+  background: #198754;
+  clip-path: circle(50%);
+  height: 15px;
+  width: 15px;
+}
+.circle-warning {
+  background: #ffc107;
+  clip-path: circle(50%);
+  height: 15px;
+  width: 15px;
+}
+.circle-danger {
+  background: #dc3545;
+  clip-path: circle(50%);
+  height: 15px;
+  width: 15px;
+}

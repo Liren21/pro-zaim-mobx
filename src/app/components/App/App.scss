@@ -48,3 +48,14 @@ body {
 @media (min-width: 100px) and (max-width: 320px) {
 
 }
+.btn-outline-dark,.btn-outline-primary,.btn-outline-secondary{
+  border:none;
+}
+.btn-bottom-panel-active{
+  border-radius: 10px;
+  display: inline-block !important;
+  color: #0d6dfb;
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+  color: #0d6dfb;
+}

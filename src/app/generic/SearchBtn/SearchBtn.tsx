@@ -1,33 +1,75 @@
-import React, {useState} from 'react'
+import {Button, Card, Col, FloatingLabel, Form, Row} from 'react-bootstrap'
 import {observer} from 'mobx-react-lite'
 import './SearchBtn.scss'
+import React from 'react'
+import {Search, Trash} from "react-bootstrap-icons";
 
 
-import FloatingLabelCustom from "../FloatingLabelCustom/FloatingLabelCustom";
-import electivesStore from "../../lib/store/pages/Electives-store";
+interface IFloatingLabelCustom {
+    value: any
+    onChange?: React.ReactEventHandler
+    onclickBtn?: React.ReactEventHandler
+    onclickBtnSecond?: React.ReactEventHandler
+    label: string
+    type?: string
+}
+
+export default observer(({
+                             value,
+                             onChange,
+                             onclickBtn,
+                             onclickBtnSecond,
+                             label,
+                             type
+                         }: IFloatingLabelCustom) => {
 
 
 
-export default observer(() => {
-    const [mes, setMec] = useState('')
 
 
-    const changeSearch = () => {
-        electivesStore.setSearch(mes)
-    }
-    // const find = () => {
-    //     return arr.filter(function (value) {
-    //         return value === find;
-    //     });
-    // }
-    console.log(electivesStore.search)
     return (
-        <>
 
-            <FloatingLabelCustom label={'Поиск'} value={electivesStore.search}
-                                 onChange={(e) => electivesStore.setSearch(e.target.value)}
-                                 onclickBtnSecond={changeSearch} onclickBtn={() => setMec('')}/>
+        <Form onSubmit={(e) => e.preventDefault()}>
+            <Card className={'floating-label-Custom-card'}>
+                <Row>
+                    <Col
+                        style={{display: 'inline-block',}}
+                        xs={8}
+                        sm={8}
+                        md={10}
+                    >
+                        <FloatingLabel
+                            controlId="floatingInput"
+                            label={label}
+                            className="mb-3"
+                            // style={{padding:' 0 1rem', fontSize:'1rem'}}
+                        >
+                            <Form.Control  value={value} onChange={onChange} maxLength={100} type={type}
+                                           placeholder="Поиск"/>
+                        </FloatingLabel>
+                    </Col>
+                    <Col
+                        // style={{display: 'inline-block', textAlign: 'center'}}
+                        xs={4}
+                        sm={4}
+                        md={2}
+                        className={'floating-form-btn'}
 
-        </>
+                    >
+                        <Button style={{margin:'0 5px'}} onClick={onclickBtnSecond}  title={'Поиск'}
+                                variant={"outline-light"}>
+                            <Trash  className={'icons'}/>
+                        </Button>
+                        <Button type={'submit'} style={{textAlign:'center'}}  onClick={onclickBtn} title={'Поиск'}
+                                variant={"outline-light"}>
+                            <Search  className={'icons'}/>
+                        </Button>
+                    </Col>
+                </Row>
+            </Card>
+
+        </Form>
+
+
     )
 })

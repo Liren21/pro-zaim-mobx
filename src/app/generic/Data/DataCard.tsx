@@ -807,38 +807,20 @@ export const bestIdea = [
         photo: 'https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-4788760-3988051.png',
     },
 ]
-export const updComp = [
+export const notification = [
+    // 0 - обычное обновление (добавление или же изменение чего-либо)
+    // 1 - среднее обновление ( добавление новой вкладки)
+    // 2 - высокое обвновление ( добавление нового функционала или важное уведомление )
     {
-        title: 'Обновление от 01.11.2022',
-        body: [
-            {
-                desc: 'Обновлена старница "подбор займа"',
-            },
-            {
-                desc: 'бавлена фукция подбор займа',
-            },
-        ],
+        lvl:0,
+        text:'Приветствую тебя новый пользователь'
     },
     {
-        title: 'Обновление от 29.10.2022',
-        body: [
-            {
-                desc: 'Иправлен баг statusBar',
-            },
-            {
-                desc: 'Изменен цвет statusBara в мобильной версии',
-            },
-        ],
+        lvl:1,
+        text:'Приветствую тебя новый пользовательdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'
     },
     {
-        title: 'Обновление от 24.10.2022',
-        body: [
-            {
-                desc: 'Иправлен баг с открытием описания',
-            },
-            {
-                desc: 'бавлена новая кнопка "Выгодные предложения"',
-            },
-        ],
+        lvl:2,
+        text:'Приветствую тебя новый пользовательdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'
     },
 ]
