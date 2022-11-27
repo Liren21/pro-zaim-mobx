@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import {observer} from 'mobx-react-lite'
 import './ServiceCard.scss'
 
@@ -8,37 +8,18 @@ import electivesStore from '../../lib/store/pages/Electives-store'
 import Info from "../../components/pages/Modal/Info/Info";
 import routes from "../../lib/routes";
 
+import HeartCustom from "../Heart/HeartCustom";
+
 interface IServiceCard {
     data: any
 }
 
 export default observer(({data}: IServiceCard) => {
-    const store = localStorage.getItem('id')
-    const [arr, setArr] = useState(['Тише', 'мыши', 'кот', 'на', 'крыше']);
-    const [value, setValue] = useState('');
 
-
-    const [arr2, setArr2] = useState([])
-
-    const [heart, setHeart] = useState(false)
     const redirect = (val) => {
         electivesStore.setLink(val)
     }
 
-    useEffect(() => {
-        if (store) {
-            setArr2(JSON.parse(store))
-        }
-    }, [])
-    useEffect(() => {
-        localStorage.setItem('id', JSON.stringify(arr2))
-    })
-    const safeName = (val) => {
-        setValue(val)
-        setArr([...arr, value])
-        electivesStore.setName(val)
-        setArr2([...arr2, val])
-    }
     return (
         <Card key={nanoid()} className={'home'}>
             <div key={nanoid()} className={'home-item'}>
@@ -51,36 +32,8 @@ export default observer(({data}: IServiceCard) => {
                 <Col key={nanoid()} xs={7} md={7}>
                     <div className={'title-card'}>
                         {data.name}
+                        <HeartCustom data={data}/>
 
-                        {/*{heart ? (*/}
-                        {/*    <i*/}
-                        {/*        style={{*/}
-                        {/*            float: 'right',*/}
-                        {/*            marginLeft: '1rem',*/}
-                        {/*            borderColor: 'rgba(255,255,255,0)',*/}
-                        {/*            borderRadius: '150px',*/}
-                        {/*        }}*/}
-                        {/*        className="fa fa-heart"*/}
-                        {/*        aria-hidden="true"*/}
-                        {/*        onClick={() => setHeart(false)}*/}
-                        {/*    />*/}
-                        {/*) : <i*/}
-                        {/*    style={{*/}
-                        {/*        float: 'right',*/}
-                        {/*        marginLeft: '1rem',*/}
-                        {/*        borderColor: 'rgba(255,255,255,0)',*/}
-                        {/*        borderRadius: '150px',*/}
-                        {/*    }}*/}
-                        {/*    className="fa fa-heart-o"*/}
-                        {/*    aria-hidden="true"*/}
-                        {/*    onClick={(event) => {*/}
-                        {/*        setHeart(true)*/}
-                        {/*       safeName(data.name)*/}
-                        {/*    }}*/}
-                        {/*/>*/}
-                        {/*}*/}
-
-                        {/*<SearchBtn data={data.name}/>*/}
                     </div>
                     <MyStat key={nanoid()} data={data.rate}/>
                 </Col>
@@ -117,7 +70,7 @@ const MyDescr = observer(({data}: any) => {
         <div>
             <Row>
                 {data.map((data) => (
-                    <Col key={nanoid()} style={{display: 'inline-block'}} md={4} sm={4} xs={4}>
+                    <Col key={nanoid()} style={{display: 'inline-block', textAlign: 'center'}} md={4} sm={4} xs={4}>
                         <div key={nanoid()} style={{fontSize: '12px'}} dangerouslySetInnerHTML={{__html: data.body}}/>
                     </Col>
                 ))}

@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Alert, Card,} from 'react-bootstrap'
 import './LoanPortfolio.scss'
 import {observer} from 'mobx-react-lite'
@@ -12,14 +12,14 @@ import {AnimationEffect} from "../../../generic/AnimationEffect/AnimationEffect"
 
 
 export default observer(() => {
-    const [showMessage, setShowMessage] = useState(false)
-    const [mes, setMec] = useState('')
 
-    const nodeRef = useRef(null)
+    const [mes, setMec] = useState(null)
+
 
     const changeVal = (value) => {
-        setMec(value)
+        setMec(value.target.value)
     }
+
     const clickNum = () => {
         if (Number(mes) < 100) {
             new Toaster({msg: 'По вашему запросу ничего не найдено', type: toast.TYPE.WARNING})
@@ -27,13 +27,13 @@ export default observer(() => {
             electivesStore.setMinNumRange(Number(mes))
         }
     }
+
     const clickNumSec = () => {
         electivesStore.setMinNumRange(Number(''))
         setMec('')
     }
     useEffect(() => {
         electivesStore.setToastBtn('Калькулятор')
-        setShowMessage(true)
     }, [])
 
     return (
@@ -46,9 +46,9 @@ export default observer(() => {
                 </Alert>
                 <br/>
                 <br/>
-                <FloatingLabelCustom type={'tel'} onclickBtn={clickNum} onclickBtnSecond={clickNumSec}
+                <FloatingLabelCustom type={'number'} onclickBtn={clickNum} onclickBtnSecond={clickNumSec}
                                      label={'Сумма до'} value={mes}
-                                     onChange={(value) => changeVal(value.target.value)}/>
+                                     onChange={(value) => changeVal(value)}/>
                 <ResultCard/>
             </Card.Body>
         </AnimationEffect>

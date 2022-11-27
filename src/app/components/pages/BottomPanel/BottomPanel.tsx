@@ -10,11 +10,10 @@ import {
     BellFill,
     Calculator,
     CalculatorFill,
-     HandThumbsUp, HandThumbsUpFill,
+    HandThumbsUp, HandThumbsUpFill,
     House,
     HouseFill,
 } from 'react-bootstrap-icons';
-import CustomOffcanvas from "../../../generic/CustomOffcanvas/CustomOffcanvas";
 
 
 
@@ -32,38 +31,36 @@ export default observer(() => {
             iconAlt: <CalculatorFill className={'icons'}/>,
             href: '#' + routes.LOAN_PORTFOLIO,
         },
-        {
-            title: 'Уведомление',
-            icon: <Bell className={'icons'}/>,
-            iconAlt: <BellFill className={'icons'}/>,
-            href: '#' + routes.NOTIFICATION,
-        },
+
         {
             title: 'Выгодные предложения',
             icon: <HandThumbsUp className={'icons'}/>,
             iconAlt: <HandThumbsUpFill className={'icons'}/>,
             href: '#' + routes.PROFITABLE_OFFERS,
         },
+        {
+            title: 'Уведомление',
+            icon: <Bell className={'icons'}/>,
+            iconAlt: <BellFill className={'icons'}/>,
+            href: '#' + routes.NOTIFICATION,
+        },
     ]
     return (
         <div className={'bottom-panel'}>
             <Row>
                 {btnForm.map((data) => (
-                    <Col key={nanoid()} md={3} sm={3} xs={3} >
-                        {
-                            data.title ? <Button
-                                    href={data.href}
-                                    variant={electivesStore.toastBtn == data.title ? 'outline-primary' : 'outline-secondary'}
-                                >
-                                    <div>
-                                        <i className="bi bi-bar-chart-line"></i>
-                                        {electivesStore.toastBtn !== data.title ? data.icon : data.iconAlt}
-                                    </div>
-                                    {/*{data.title}*/}
-                                </Button>
-                                :
-                                <CustomOffcanvas icon={data.icon} title={data.name}/>
-                        }
+                    <Col key={nanoid()} md={3} sm={3} xs={3}>
+                        <Button
+                            href={data.href}
+                            variant={electivesStore.toastBtn == data.title ? 'outline-primary' : 'outline-secondary'}
+                        >
+                            <div>
+                                <i className="bi bi-bar-chart-line"></i>
+                                {electivesStore.toastBtn !== data.title ? data.icon : data.iconAlt}
+                            </div>
+                            {/*{data.title}*/}
+                        </Button>
+
                     </Col>
                 ))}
             </Row>
