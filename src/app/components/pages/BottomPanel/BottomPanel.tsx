@@ -1,16 +1,14 @@
 import React from 'react'
 import {observer} from 'mobx-react-lite'
 import './BottomPanel.scss'
-import {Button, Col, Row} from 'react-bootstrap'
+import { Col, Row} from 'react-bootstrap'
 import routes from '../../../lib/routes'
 import {nanoid} from 'nanoid'
 import electivesStore from '../../../lib/store/pages/Electives-store'
 import {
-    Bell,
-    BellFill,
     Calculator,
     CalculatorFill,
-    HandThumbsUp, HandThumbsUpFill,
+    HandThumbsUp, HandThumbsUpFill, Heart, HeartFill,
     House,
     HouseFill,
 } from 'react-bootstrap-icons';
@@ -21,28 +19,28 @@ export default observer(() => {
     const btnForm = [
         {
             title: 'Займ',
-            icon: <House className={'icons'}/>,
+            icon: <House  className={'icons-fill'}/>,
             iconAlt: <HouseFill className={'icons'}/>,
             href: '#' + routes.HOME,
         },
         {
             title: 'Калькулятор',
-            icon: <Calculator className={'icons'}/>,
+            icon: <Calculator  className={'icons-fill'}/>,
             iconAlt: <CalculatorFill className={'icons'}/>,
             href: '#' + routes.LOAN_PORTFOLIO,
+        },
+        {
+            title: 'Избранное',
+            icon: <Heart  className={'icons-fill'}/>,
+            iconAlt: <HeartFill className={'icons'}/>,
+            href: '#' + routes.HEART,
         },
 
         {
             title: 'Выгодные предложения',
-            icon: <HandThumbsUp className={'icons'}/>,
+            icon: <HandThumbsUp  style={{textAlign:'left'}} className={'icons-fill'}/>,
             iconAlt: <HandThumbsUpFill className={'icons'}/>,
             href: '#' + routes.PROFITABLE_OFFERS,
-        },
-        {
-            title: 'Уведомление',
-            icon: <Bell className={'icons'}/>,
-            iconAlt: <BellFill className={'icons'}/>,
-            href: '#' + routes.NOTIFICATION,
         },
     ]
     return (
@@ -50,16 +48,11 @@ export default observer(() => {
             <Row>
                 {btnForm.map((data) => (
                     <Col key={nanoid()} md={3} sm={3} xs={3}>
-                        <Button
+                        <a
                             href={data.href}
-                            variant={electivesStore.toastBtn == data.title ? 'outline-primary' : 'outline-secondary'}
                         >
-                            <div>
-                                <i className="bi bi-bar-chart-line"></i>
                                 {electivesStore.toastBtn !== data.title ? data.icon : data.iconAlt}
-                            </div>
-                            {/*{data.title}*/}
-                        </Button>
+                        </a>
 
                     </Col>
                 ))}

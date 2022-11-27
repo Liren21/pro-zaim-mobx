@@ -24,20 +24,22 @@ export default observer(() => {
 
     return (
        <AnimationEffect>
-           <ModalLoader/>
-           <ToastCustom/>
-           <Row key={nanoid()}>
-               <Alert style={{border: 'none', borderRadius: '12px', textAlign: 'center'}} key={nanoid()}
-                      variant={'success'}>
-                   Рекомендуем займы на выгодных условия
-               </Alert>
+          <div style={{padding:'0 1rem'}}>
+              <ModalLoader/>
+              <ToastCustom/>
+              <Row key={nanoid()}>
+                  <Alert style={{border: 'none', borderRadius: '12px', textAlign: 'center'}} key={nanoid()}
+                         variant={'success'}>
+                      Рекомендуем займы на выгодных условия
+                  </Alert>
 
-               {data.map((data) => (
-                   <Col key={nanoid()} md={6} lg={4} xl={3} style={{paddingBottom: ".7rem"}}>
-                       <ServiceCard data={data}/>
-                   </Col>
-               ))}
-           </Row>
+                  {data.map((data) => (
+                      <Col key={nanoid()} md={6} lg={4} xl={3} style={{paddingBottom: ".7rem"}}>
+                          <ServiceCard data={data}/>
+                      </Col>
+                  ))}
+              </Row>
+          </div>
        </AnimationEffect>
     )
 })

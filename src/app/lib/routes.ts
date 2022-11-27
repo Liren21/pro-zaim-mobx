@@ -7,4 +7,5 @@ export default {
     TECHNICAL_WORK:'/technical_works',
     RAPPORT:'/rapport',
     NOTIFICATION:'/notification',
+    HEART:'/heart',
 }

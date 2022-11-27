@@ -10,6 +10,7 @@ import UpdateComp from '../pages/UpdateComp/UpdateComp'
 import TechnicalWork from "../pages/TechnicalWork/TechnicalWork";
 import Rapport from "../pages/Rapport/Rapport";
 import Notification from "../pages/Notification/Notification";
+import HeartVal from "../pages/HeartVal/HeartVal";
 
 const Router = observer(() => {
     return (
@@ -22,6 +23,7 @@ const Router = observer(() => {
                 <Route exact path={routes.TECHNICAL_WORK} component={TechnicalWork} />
                 <Route exact path={routes.RAPPORT} component={Rapport} />
                 <Route exact path={routes.NOTIFICATION} component={Notification} />
+                <Route exact path={routes.HEART} component={HeartVal} />
                 <Redirect from="*" to={routes.HOME} />
             </Switch>
         </HashRouter>

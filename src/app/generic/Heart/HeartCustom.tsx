@@ -1,7 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState} from 'react'
 import {observer} from 'mobx-react-lite'
 import {Heart, HeartFill} from "react-bootstrap-icons";
 import electivesStore from "../../lib/store/pages/Electives-store";
+
+
 
 interface IServiceCard {
     data: never
