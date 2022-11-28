@@ -3,16 +3,18 @@ import {observer, } from 'mobx-react-lite'
 import electivesStore from "../../../lib/store/pages/Electives-store";
 import {useLocalStorage} from 'usehooks-ts'
 import {Button} from "react-bootstrap";
+import ServiceCard from "../../../generic/ServiceCard/ServiceCard";
 
 export default observer(() => {
-    const [heart, setHeart] = useState([
-        {name:'ddddd'}
-    ])
-    const [isDarkTheme, setDarkTheme] = useLocalStorage('darkTheme', true)
+    const [heart, setHeart] = useState([])
+    const [heartLoc, setHeartLoc] = useLocalStorage('heart',[])
 
-    const toggleTheme = () => {
-        setDarkTheme((prevValue: boolean) => !prevValue)
-    }
+    useEffect(() => {
+        const data = localStorage.getItem('heart')
+        if (data) {
+            setHeart(JSON.parse(data))
+        }
+    }, [])
 
     useEffect(() => {
 
@@ -24,9 +26,7 @@ export default observer(() => {
         <>
             {
                 heart.map((d)=>(
-                   <Button onClick={toggleTheme}>
-                       d.name
-                   </Button>
+                  <ServiceCard data={d}/>
                 ))
             }
         </>

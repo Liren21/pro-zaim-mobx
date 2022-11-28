@@ -20,7 +20,7 @@ export default observer(() => {
         electivesStore.setStateLoader(false)
     }, [])
 
-
+    // На этом уровне сделать чек лайка
 
     return (
        <AnimationEffect>
