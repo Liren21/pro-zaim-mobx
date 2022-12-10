@@ -812,15 +812,18 @@ export const notification = [
     // 1 - среднее обновление ( добавление новой вкладки)
     // 2 - высокое обвновление ( добавление нового функционала или важное уведомление )
     {
-        lvl:0,
-        text:'Приветствую тебя новый пользователь'
+        lvl: 0,
+        text: 'Приветствую тебя новый пользователь',
+        id: 0
     },
     {
-        lvl:1,
-        text:'Приветствую тебя новый пользовательdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'
+        lvl: 1,
+        text: 'Приветствую тебя новый пользовательdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
+        id: 1
     },
     {
-        lvl:2,
-        text:'Приветствую тебя новый пользовательdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'
+        lvl: 2,
+        text: 'Приветствую тебя новый пользовательdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
+        id: 2
     },
 ]

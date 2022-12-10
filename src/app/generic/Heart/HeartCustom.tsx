@@ -6,44 +6,53 @@ import {useLocalStorage} from "usehooks-ts";
 
 
 interface IServiceCard {
-    data: never
+    data: any
 }
 
 export default observer(({data}: IServiceCard) => {
 
     const [heart, setHeart] = useState(false)
-    const [heartLoc, setHeartLoc] = useLocalStorage('heart',[])
-    const [heartLocOne, setHeartLocOne] = useLocalStorage('heart',[])
+    const [heartLoc] = useLocalStorage('heart', [])
 
 
     useEffect(() => {
         const data = localStorage.getItem('heart')
         if (data) {
-            setHeartLocOne(JSON.parse(data))
+            electivesStore.setStateHeart(JSON.parse(data))
         }
-    }, [])
 
-    useEffect(()=>{
-        setHeartLoc(electivesStore.stateHeart)
-    },[heart])
+    }, [])
+    useEffect(() => {
+        localStorage.setItem('heart', JSON.stringify(electivesStore.stateHeart))
+    })
+
+    useEffect(() => {
+        electivesStore.stateHeart.filter((d) => {
+            if (d.name == data.name) {
+                setHeart(true)
+            }
+        })
+    }, [heart])
 
     const add = (val: never) => {
         setHeart(true)
         electivesStore.stateHeart.push(val)
-        heartLoc.push(val)
+        electivesStore.setHeart(electivesStore.heart + 1)
     }
     const deleteArr = (val) => {
         if (val.id !== -1) {
             electivesStore.stateHeart.splice(val.id, 1);
-            heartLoc.splice(val.id,1)
+            heartLoc.splice(val.id, 1)
+
         }
         setHeart(false)
-
+        electivesStore.setHeart(electivesStore.heart - 1)
     }
+
     return (
         <>
-            {heart?
 
+            {heart ?
                 <HeartFill onClick={() => deleteArr(data)
                 } className={'heart'}/>
                 :

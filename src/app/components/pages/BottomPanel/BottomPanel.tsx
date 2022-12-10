@@ -1,7 +1,7 @@
 import React from 'react'
 import {observer} from 'mobx-react-lite'
 import './BottomPanel.scss'
-import { Col, Row} from 'react-bootstrap'
+import {Button, Col, Row} from 'react-bootstrap'
 import routes from '../../../lib/routes'
 import {nanoid} from 'nanoid'
 import electivesStore from '../../../lib/store/pages/Electives-store'
@@ -18,7 +18,7 @@ import {
 export default observer(() => {
     const btnForm = [
         {
-            title: 'Займ',
+            title: 'Хранилище',
             icon: <House  className={'icons-fill'}/>,
             iconAlt: <HouseFill className={'icons'}/>,
             href: '#' + routes.HOME,
@@ -37,7 +37,7 @@ export default observer(() => {
         },
 
         {
-            title: 'Выгодные предложения',
+            title: 'Предложения',
             icon: <HandThumbsUp  style={{textAlign:'left'}} className={'icons-fill'}/>,
             iconAlt: <HandThumbsUpFill className={'icons'}/>,
             href: '#' + routes.PROFITABLE_OFFERS,
@@ -48,11 +48,12 @@ export default observer(() => {
             <Row>
                 {btnForm.map((data) => (
                     <Col key={nanoid()} md={3} sm={3} xs={3}>
-                        <a
+                        <Button
+                            variant={"outline-primary"}
                             href={data.href}
                         >
                                 {electivesStore.toastBtn !== data.title ? data.icon : data.iconAlt}
-                        </a>
+                        </Button>
 
                     </Col>
                 ))}

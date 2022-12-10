@@ -13,12 +13,11 @@ import electivesStore from "../../../lib/store/pages/Electives-store";
 import {AnimationEffect} from "../../../generic/AnimationEffect/AnimationEffect";
 
 export default observer(() => {
-    const [showMessage, setShowMessage] = useState(false)
-    const nodeRef = useRef(null)
+
 
     useEffect(() => {
-        electivesStore.setToastBtn('Выгодные предложения')
-        setShowMessage(true)
+        electivesStore.setToastBtn('Предложения')
+
     }, [])
     return (
         <AnimationEffect>

@@ -1,7 +1,6 @@
 
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'font-awesome/css/font-awesome.min.css'
 import './App/App.scss'
 import './ContainerApp/ContainerApp.scss'
 import './ModalWindow/ModalWindow.scss'

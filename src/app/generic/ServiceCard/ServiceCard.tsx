@@ -12,6 +12,7 @@ import HeartCustom from "../Heart/HeartCustom";
 
 interface IServiceCard {
     data: any
+
 }
 
 export default observer(({data}: IServiceCard) => {
@@ -32,7 +33,7 @@ export default observer(({data}: IServiceCard) => {
                 <Col key={nanoid()} xs={7} md={7}>
                     <div className={'title-card'}>
                         {data.name}
-                        <HeartCustom data={data}/>
+                        <HeartCustom  data={data}/>
 
                     </div>
                     <MyStat key={nanoid()} data={data.rate}/>

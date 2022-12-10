@@ -7,13 +7,15 @@ interface IElectivesStore {
     stateOffcanvas: boolean
     stateLoader: boolean
     stateToastHome: boolean
-    stateHeart: []
+    stateHeart: any
     messageToastHome: string
     minNumRange: number
     maxNumRange: number
     toastBtn: string
     technicalWorks: boolean
     stateToast: boolean
+    heart: number
+    bob: []
 }
 
 class ElectivesStore implements IElectivesStore {
@@ -27,9 +29,11 @@ class ElectivesStore implements IElectivesStore {
     stateOffcanvas = false
     stateLoader = false
     stateToastHome = false
-    technicalWorks = true
+    technicalWorks = false
     stateToast = false
-    stateHeart: [] = []
+    heart = 0
+    stateHeart: any = []
+    bob: [] = []
 
     constructor() {
         makeAutoObservable(this, {}, {deep: true})
@@ -70,6 +74,9 @@ class ElectivesStore implements IElectivesStore {
     setStateToast(val: boolean) {
         this.stateToast = val
     }
+    setHeart(val: number) {
+        this.heart = val
+    }
 
     setStateLoader(val: boolean) {
         this.stateLoader = val
@@ -79,8 +86,12 @@ class ElectivesStore implements IElectivesStore {
         this.technicalWorks = val
     }
 
-    setStateHeart(val: []) {
+    setStateHeart(val: any):void {
         this.stateHeart = val
+    }
+
+    setBob(val: []):void {
+        this.bob = val
     }
 
     // redirectLink() {
