@@ -54,7 +54,7 @@ const HeaderApp = observer(() => {
                         {electivesStore.toastBtn}
                     </Navbar.Brand>
                     <Navbar.Brand className={'title-right'}>
-                        <a href={'#' + routes.NOTIFICATION}>
+                        <a  href={'#' + routes.NOTIFICATION}>
                             <CustomBell/>
                         </a>
                     </Navbar.Brand>

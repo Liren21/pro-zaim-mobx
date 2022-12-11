@@ -8,7 +8,7 @@ import './HeartVal.scss'
 export default observer(() => {
     const [heart, setHeart] = useState([])
     const [state, setState] = useState(false)
-    console.log(electivesStore.heart)
+
     useEffect(() => {
         const data = localStorage.getItem('heart')
         if (data) {

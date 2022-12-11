@@ -11,7 +11,7 @@ import {nanoid} from "nanoid";
 
 export default observer(() => {
 
-    console.log(1)
+
     useEffect(() => {
         electivesStore.setToastBtn('Уведомления')
     }, [])

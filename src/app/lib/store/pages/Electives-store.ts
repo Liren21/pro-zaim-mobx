@@ -10,6 +10,7 @@ interface IElectivesStore {
     stateHeart: any
     messageToastHome: string
     minNumRange: number
+    kok: number
     maxNumRange: number
     toastBtn: string
     technicalWorks: boolean
@@ -25,13 +26,14 @@ class ElectivesStore implements IElectivesStore {
     messageToastHome = ''
     toastBtn = ''
     minNumRange = 0
+    kok = 0
     maxNumRange = 0
     stateOffcanvas = false
     stateLoader = false
     stateToastHome = false
     technicalWorks = false
     stateToast = false
-    heart = 0
+    heart = null
     stateHeart: any = []
     bob: [] = []
 
@@ -61,6 +63,9 @@ class ElectivesStore implements IElectivesStore {
 
     setMinNumRange(val: number) {
         this.minNumRange = val
+    }
+    setKok(val: number) {
+        this.kok = val
     }
 
     setMaxNumRange(val: number) {

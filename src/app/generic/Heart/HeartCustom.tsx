@@ -26,6 +26,7 @@ export default observer(({data}: IServiceCard) => {
         localStorage.setItem('heart', JSON.stringify(electivesStore.stateHeart))
     })
 
+
     useEffect(() => {
         electivesStore.stateHeart.filter((d) => {
             if (d.name == data.name) {
@@ -34,17 +35,15 @@ export default observer(({data}: IServiceCard) => {
         })
     }, [heart])
 
-    const add = (val: never) => {
+    const add = (val) => {
         setHeart(true)
         electivesStore.stateHeart.push(val)
         electivesStore.setHeart(electivesStore.heart + 1)
     }
     const deleteArr = (val) => {
-        if (val.id !== -1) {
-            electivesStore.stateHeart.splice(val.id, 1);
-            heartLoc.splice(val.id, 1)
-
-        }
+        const index = electivesStore.stateHeart.findIndex(el => el.name === val.name);
+        electivesStore.stateHeart.splice(index, 1);
+        heartLoc.splice(index, 1)
         setHeart(false)
         electivesStore.setHeart(electivesStore.heart - 1)
     }
