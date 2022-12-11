@@ -4,6 +4,7 @@ import electivesStore from "../../../lib/store/pages/Electives-store";
 import ServiceCard from "../../../generic/ServiceCard/ServiceCard";
 import {AnimationEffect} from "../../../generic/AnimationEffect/AnimationEffect";
 import './HeartVal.scss'
+import MsgEmpty from "../../../generic/MsgEmpty/MsgEmpty";
 
 export default observer(() => {
     const [heart, setHeart] = useState([])
@@ -35,14 +36,9 @@ export default observer(() => {
                         }
                     </AnimationEffect>
                     :
-                    <MsgEmpty/>
+                    <MsgEmpty text={'Вам пока что ничего не понравилось 😔'} />
             }
         </>
     )
 })
 
-const MsgEmpty = observer(() => (
-    <AnimationEffect>
-        <div className={'msg-empty'}> Пусто 😒</div>
-    </AnimationEffect>
-))

@@ -801,11 +801,11 @@ export const doc = [
     },
 ]
 export const bestIdea = [
-    {
-        title: 'Пусто',
-        body: 'Приносим свои извинения, за пустоту, в скором времени это исправим',
-        photo: 'https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-4788760-3988051.png',
-    },
+    // {
+    //     title: 'Пусто',
+    //     body: 'Приносим свои извинения, за пустоту, в скором времени это исправим',
+    //     photo: 'https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-4788760-3988051.png',
+    // },
 ]
 export const notification = [
     // 0 - обычное обновление (добавление или же изменение чего-либо)
