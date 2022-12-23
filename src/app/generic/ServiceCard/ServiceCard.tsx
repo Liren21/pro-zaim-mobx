@@ -6,9 +6,11 @@ import {Button, Card, Col, Row} from 'react-bootstrap'
 import {nanoid} from 'nanoid'
 import electivesStore from '../../lib/store/pages/Electives-store'
 import Info from "../../components/pages/Modal/Info/Info";
-import routes from "../../lib/routes";
+
 
 import HeartCustom from "../Heart/HeartCustom";
+import {ChatDots, StarFill} from "react-bootstrap-icons";
+
 
 interface IServiceCard {
     data: any
@@ -16,6 +18,7 @@ interface IServiceCard {
 }
 
 export default observer(({data}: IServiceCard) => {
+
 
     const redirect = (val) => {
         electivesStore.setLink(val)
@@ -33,7 +36,7 @@ export default observer(({data}: IServiceCard) => {
                 <Col key={nanoid()} xs={7} md={7}>
                     <div className={'title-card'}>
                         {data.name}
-                        <HeartCustom  data={data}/>
+                        <HeartCustom data={data}/>
 
                     </div>
                     <MyStat key={nanoid()} data={data.rate}/>
@@ -48,16 +51,21 @@ export default observer(({data}: IServiceCard) => {
                 </Col>
                 <Col key={nanoid()} xs={6} md={6}>
                     <Button
-                        href={electivesStore.technicalWorks ? '#' + routes.TECHNICAL_WORK : data.link}
+                        href={electivesStore.details != 'RU' ? null
+                            :
+                            data.link
+                        }
                         variant={'primary'}
                         className={'home-btn'}
-                        onClick={electivesStore.technicalWorks ?
-                            null
-                            :
-                            () => {
-                                redirect(data.link)
-                                electivesStore.setStateLoader(true)
-                            }}
+                        onClick={
+                            electivesStore.details != 'RU' ?
+                                null
+                                :
+                                () => {
+                                    redirect(data.link)
+                                    electivesStore.setStateLoader(true)
+                                }
+                        }
                     >
                         Открыть
                     </Button>
@@ -84,8 +92,14 @@ const MyStat = observer(({data}: any) => {
         <div style={{margin: '0 0 0 10px'}}>
             {data.map((data) => (
                 <div style={{fontSize: '12px'}} key={nanoid()}>
-                    {data.star}
-                    <i className="fa fa-star" aria-hidden="true"/> {data.feedback} Отзыв
+                    <Row>
+                        <Col style={{float: 'right'}} xs={4} sm={6} md={6}>
+                            <StarFill style={{color: '#ffca2c'}}/> {data.star}
+                        </Col>
+                        <Col style={{float: 'left'}} xs={6} sm={6} md={6}>
+                            <ChatDots style={{fontSize: '.8rem'}}/> {data.feedback}
+                        </Col>
+                    </Row>
                 </div>
             ))}
         </div>

@@ -7,9 +7,9 @@ import Scrollbar from 'react-scrollbars-custom'
 import routes from '../../../app/lib/routes'
 // @ts-ignore
 import layer from '../../../app/generic/Img/layer.png'
-import {Bell, BellFill, Calculator, CashCoin, Collection, QuestionSquare} from "react-bootstrap-icons";
+import { Calculator, CashCoin, Collection, QuestionSquare} from "react-bootstrap-icons";
 import electivesStore from "../../../app/lib/store/pages/Electives-store";
-import CustomBell from "../../../app/components/pages/CustomBell/CustomBell";
+
 
 const HeaderApp = observer(() => {
     return (
@@ -54,9 +54,16 @@ const HeaderApp = observer(() => {
                         {electivesStore.toastBtn}
                     </Navbar.Brand>
                     <Navbar.Brand className={'title-right'}>
-                        <a  href={'#' + routes.NOTIFICATION}>
-                            <CustomBell/>
-                        </a>
+                        <img
+                            src={layer}
+                            width="30"
+                            height="30"
+                            className="d-inline-block align-top"
+                            alt="React Bootstrap logo"
+                        />
+                        {/*<a  href={'#' + routes.NOTIFICATION}>*/}
+                        {/*    <CustomBell/>*/}
+                        {/*</a>*/}
                     </Navbar.Brand>
                 </Navbar>
             </div>

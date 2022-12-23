@@ -5,11 +5,10 @@ import {AnimationEffect} from "../AnimationEffect/AnimationEffect";
 
 
 interface IMsgEmpty {
-    text:string
+    text: string
 }
 
-export default observer(({text}:IMsgEmpty) => {
-
+export default observer(({text}: IMsgEmpty) => {
 
 
     return (

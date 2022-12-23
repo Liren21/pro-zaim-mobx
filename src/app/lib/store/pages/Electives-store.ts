@@ -13,6 +13,8 @@ interface IElectivesStore {
     kok: number
     maxNumRange: number
     toastBtn: string
+    userLang: string
+    details: string
     technicalWorks: boolean
     stateToast: boolean
     heart: number
@@ -31,9 +33,11 @@ class ElectivesStore implements IElectivesStore {
     stateOffcanvas = false
     stateLoader = false
     stateToastHome = false
-    technicalWorks = false
+    technicalWorks = true
     stateToast = false
     heart = null
+    details = null
+    userLang = null
     stateHeart: any = []
     bob: [] = []
 
@@ -44,29 +48,21 @@ class ElectivesStore implements IElectivesStore {
     setLink(val: string) {
         this.link = val
     }
-
-    setName(val: string) {
-        this.name = val
-    }
-
-    setSearch(val: string) {
-        this.search = val
-    }
-
-    setMessageToastHome(val: string) {
-        this.messageToastHome = val
-    }
-
     setToastBtn(val: string) {
         this.toastBtn = val
+    }
+
+    setDetails(val: string) {
+        this.details = val
+    }
+    setUserLang(val: string) {
+        this.userLang = val
     }
 
     setMinNumRange(val: number) {
         this.minNumRange = val
     }
-    setKok(val: number) {
-        this.kok = val
-    }
+
 
     setMaxNumRange(val: number) {
         this.maxNumRange = val
@@ -74,10 +70,6 @@ class ElectivesStore implements IElectivesStore {
 
     setStateToastHome(val: boolean) {
         this.stateToastHome = val
-    }
-
-    setStateToast(val: boolean) {
-        this.stateToast = val
     }
     setHeart(val: number) {
         this.heart = val
@@ -87,10 +79,6 @@ class ElectivesStore implements IElectivesStore {
         this.stateLoader = val
     }
 
-    setTechnicalWorks(val: boolean) {
-        this.technicalWorks = val
-    }
-
     setStateHeart(val: any):void {
         this.stateHeart = val
     }
@@ -98,14 +86,6 @@ class ElectivesStore implements IElectivesStore {
     setBob(val: []):void {
         this.bob = val
     }
-
-    // redirectLink() {
-    //
-    //     service.getStudentsById()
-    //         .then(() => {
-    //         })
-    //         .catch(handlerError)
-    // }
 }
 
 export default new ElectivesStore()

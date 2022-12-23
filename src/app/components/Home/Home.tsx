@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import {observer} from 'mobx-react-lite'
 import './Home.scss'
 import {data} from '../../generic/Data/DataCard'
@@ -14,13 +14,12 @@ import {AnimationEffect} from "../../generic/AnimationEffect/AnimationEffect";
 
 export default observer(() => {
 
+
     useEffect(() => {
         electivesStore.setToastBtn('Хранилище')
         electivesStore.setStateLoader(false)
     }, [])
 
-
-    // На этом уровне сделать чек лайка
     return (
         <AnimationEffect>
             <div style={{padding: '0 1rem'}}>
