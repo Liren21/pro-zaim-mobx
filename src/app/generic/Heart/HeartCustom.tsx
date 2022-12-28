@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import {observer} from 'mobx-react-lite'
-import {Heart, HeartFill} from "react-bootstrap-icons";
+
 import electivesStore from "../../lib/store/pages/Electives-store";
 import {useLocalStorage} from "usehooks-ts";
 
+import {faHeart} from "@fortawesome/free-solid-svg-icons/faHeart";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+const faPropIconFaHeart = faHeart;
 interface IServiceCard {
     data: any
 }
@@ -52,11 +55,12 @@ export default observer(({data}: IServiceCard) => {
         <>
 
             {heart ?
-                <HeartFill onClick={() => deleteArr(data)
-                } className={'heart'}/>
+                <FontAwesomeIcon icon={faPropIconFaHeart} onClick={() => deleteArr(data)
+                } className={'heart'} />
+
                 :
-                <Heart onClick={() => add(data)
-                } className={'heart'}/>
+                <FontAwesomeIcon icon={faPropIconFaHeart} onClick={() => add(data)
+                } className={'heart-off'}/>
             }
         </>
     )

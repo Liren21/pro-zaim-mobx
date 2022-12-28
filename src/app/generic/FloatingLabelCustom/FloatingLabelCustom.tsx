@@ -2,8 +2,13 @@ import {Button, Card, Col, FloatingLabel, Form, Row} from 'react-bootstrap'
 import {observer} from 'mobx-react-lite'
 import './FloatingLabelCustom.scss'
 import React from 'react'
-import {Search, Trash} from "react-bootstrap-icons";
 
+import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons/faMagnifyingGlass";
+import {faXmark} from "@fortawesome/free-solid-svg-icons/faXmark";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
+const faPropIconFaMagnifyingGlass = faMagnifyingGlass;
+const faPropIconFaXmark = faXmark;
 
 interface IFloatingLabelCustom {
     value: any
@@ -24,8 +29,6 @@ export default observer(({
                          }: IFloatingLabelCustom) => {
 
 
-
-
     return (
 
         <Form onSubmit={(e) => e.preventDefault()}>
@@ -43,8 +46,8 @@ export default observer(({
                             className="mb-3"
                             // style={{padding:' 0 1rem', fontSize:'1rem'}}
                         >
-                            <Form.Control  value={value} onChange={onChange} maxLength={100} type={type}
-                                           placeholder="Поиск"/>
+                            <Form.Control value={value} onChange={onChange} maxLength={100} type={type}
+                                          placeholder="Поиск"/>
                         </FloatingLabel>
                     </Col>
                     <Col
@@ -55,17 +58,15 @@ export default observer(({
                         className={'floating-form-btn'}
 
                     >
-                        <Button style={{margin:'0 5px'}} onClick={onclickBtnSecond}  title={'Поиск'}
+                        <Button style={{margin: '0 5px'}} onClick={onclickBtnSecond} title={'Поиск'}
                                 variant={"outline-light"}>
-                            <Trash style={{fontSize:'1.2rem'}}  />
+                            <FontAwesomeIcon icon={faPropIconFaXmark} style={{fontSize: '1.2rem'}} />
                         </Button>
-                        <Button type={'submit'} style={{textAlign:'center'}}  onClick={onclickBtn} title={'Поиск'}
+                        <Button type={'submit'} style={{textAlign: 'center'}} onClick={onclickBtn} title={'Поиск'}
                                 variant={"outline-light"}>
-                            <Search  style={{fontSize:'1.2rem'}}/>
+                            <FontAwesomeIcon icon={faPropIconFaMagnifyingGlass} style={{fontSize: '1.2rem'}} />
                         </Button>
                     </Col>
-
-
 
 
                 </Row>

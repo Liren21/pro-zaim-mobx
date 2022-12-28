@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState} from 'react'
 import {observer} from 'mobx-react-lite'
 import {Button, Card, Col, Row} from "react-bootstrap";
 import {nanoid} from "nanoid";
 import './NotificationBody.scss'
-import {XLg} from "react-bootstrap-icons";
+
 import {useLocalStorage} from "usehooks-ts";
 import electivesStore from "../../../../lib/store/pages/Electives-store";
-import {data, notification} from "../../../../generic/Data/DataCard";
+
 
 interface INotificationBody {
     data?: any
@@ -71,7 +71,7 @@ export default observer(({lvl, text, id,data}: INotificationBody) => {
                 style={{textAlign: 'center'}}
             >
                 <Button onClick={() => pushVal(data)} variant={"outline-secondary"}>
-                    <XLg key={nanoid()}/>
+                  ds
                 </Button>
                 <br/>
                 <br/>

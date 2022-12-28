@@ -7,7 +7,7 @@ import Scrollbar from 'react-scrollbars-custom'
 import routes from '../../../app/lib/routes'
 // @ts-ignore
 import layer from '../../../app/generic/Img/layer.png'
-import { Calculator, CashCoin, Collection, QuestionSquare} from "react-bootstrap-icons";
+
 import electivesStore from "../../../app/lib/store/pages/Electives-store";
 
 
@@ -23,20 +23,20 @@ const HeaderApp = observer(() => {
                     <Nav className={'title-left'}>
                         <Nav className="justify-content-end flex-grow-1 pe-3">
                             <Nav.Link className={'header-btn-hone'} href={'#' + routes.HOME}>
-                                <Collection className={'icons'}/> Займ
+                                Займ
                             </Nav.Link>
                             <Nav.Link className={'header-btn-calculate'} href={'#' + routes.LOAN_PORTFOLIO}>
                                 {' '}
-                                <Calculator className={'icons'}/> Калькулятор
+                                Калькулятор
                             </Nav.Link>{' '}
                             <Nav.Link
                                 className={'header-btn-cprofile-offers'}
                                 href={'#' + routes.PROFITABLE_OFFERS}
                             >
-                                <CashCoin className={'icons'}/> Выгодные предложения
+                               Выгодные предложения
                             </Nav.Link>
                             <Nav.Link className={'header-btn-upd-comp'} href={'#' + routes.UPD_COMP}>
-                                <QuestionSquare className={'icons'}/> Что нового
+                              Что нового
                             </Nav.Link>
                         </Nav>
                     </Nav>

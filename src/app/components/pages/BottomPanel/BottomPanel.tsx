@@ -5,41 +5,37 @@ import {Button, Col, Row} from 'react-bootstrap'
 import routes from '../../../lib/routes'
 import {nanoid} from 'nanoid'
 import electivesStore from '../../../lib/store/pages/Electives-store'
-import {
-    Calculator,
-    CalculatorFill,
-    HandThumbsUp, HandThumbsUpFill, Heart, HeartFill,
-    House,
-    HouseFill,
-} from 'react-bootstrap-icons';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHouse} from "@fortawesome/free-solid-svg-icons/faHouse";
+import {faCalculator} from "@fortawesome/free-solid-svg-icons/faCalculator";
+import {faHeart} from "@fortawesome/free-solid-svg-icons/faHeart";
+import {faThumbsUp} from "@fortawesome/free-solid-svg-icons/faThumbsUp";
 
-
-
+const faPropIconFaHouse = faHouse;
+const faPropIconOneFaCalculator = faCalculator;
+const faPropIconOneFaHeart = faHeart;
+const faPropIconFaThumbsUp = faThumbsUp;
 export default observer(() => {
     const btnForm = [
         {
             title: 'Хранилище',
-            icon: <House  className={'icons-fill'}/>,
-            iconAlt: <HouseFill className={'icons'}/>,
+            icon: <FontAwesomeIcon icon={faPropIconFaHouse} />,
             href: '#' + routes.HOME,
         },
         {
             title: 'Калькулятор',
-            icon: <Calculator  className={'icons-fill'}/>,
-            iconAlt: <CalculatorFill className={'icons'}/>,
+            icon: <FontAwesomeIcon icon={faPropIconOneFaCalculator}/>,
             href: '#' + routes.LOAN_PORTFOLIO,
         },
         {
             title: 'Избранное',
-            icon: <Heart  className={'icons-fill'}/>,
-            iconAlt: <HeartFill className={'icons'}/>,
+            icon: <FontAwesomeIcon icon={faPropIconOneFaHeart} />,
             href: '#' + routes.HEART,
         },
 
         {
             title: 'Предложения',
-            icon: <HandThumbsUp  style={{textAlign:'left'}} className={'icons-fill'}/>,
-            iconAlt: <HandThumbsUpFill className={'icons'}/>,
+            icon: <FontAwesomeIcon icon={faPropIconFaThumbsUp} />,
             href: '#' + routes.PROFITABLE_OFFERS,
         },
     ]
@@ -49,10 +45,11 @@ export default observer(() => {
                 {btnForm.map((data) => (
                     <Col key={nanoid()} md={3} sm={3} xs={3}>
                         <Button
-                            variant={"outline-primary"}
+                            variant={electivesStore.toastBtn == data.title ?"outline-primary":"outline-secondary"}
                             href={data.href}
+                            style={{fontSize:'1.5rem'}}
                         >
-                                {electivesStore.toastBtn !== data.title ? data.icon : data.iconAlt}
+                            { data.icon}
                         </Button>
 
                     </Col>

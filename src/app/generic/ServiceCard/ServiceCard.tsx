@@ -9,8 +9,10 @@ import Info from "../../components/pages/Modal/Info/Info";
 
 
 import HeartCustom from "../Heart/HeartCustom";
-import {ChatDots, StarFill} from "react-bootstrap-icons";
+import {faStar} from "@fortawesome/free-solid-svg-icons/faStar";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+const faPropIconFaStar = faStar;
 
 interface IServiceCard {
     data: any
@@ -92,14 +94,11 @@ const MyStat = observer(({data}: any) => {
         <div style={{margin: '0 0 0 10px'}}>
             {data.map((data) => (
                 <div style={{fontSize: '12px'}} key={nanoid()}>
-                    <Row>
-                        <Col style={{float: 'right'}} xs={4} sm={6} md={6}>
-                            <StarFill style={{color: '#ffca2c'}}/> {data.star}
-                        </Col>
-                        <Col style={{float: 'left'}} xs={6} sm={6} md={6}>
-                            <ChatDots style={{fontSize: '.8rem'}}/> {data.feedback}
-                        </Col>
-                    </Row>
+
+                            <FontAwesomeIcon icon={faPropIconFaStar} style={{color: '#ffca2c'}}/>
+                             {data.star}
+
+
                 </div>
             ))}
         </div>
