@@ -6,7 +6,7 @@ import {Alert, Col, Row} from 'react-bootstrap'
 
 import {nanoid} from 'nanoid'
 import electivesStore from '../../lib/store/pages/Electives-store'
-import ToastCustom from '../../generic/ToastCustom/ToastCustom'
+
 import ModalLoader from '../../generic/ModalLoader/ModalLoader'
 import ServiceCard from "../../generic/ServiceCard/ServiceCard";
 import {AnimationEffect} from "../../generic/AnimationEffect/AnimationEffect";
@@ -25,7 +25,7 @@ export default observer(() => {
             <div style={{padding: '0 1rem'}}>
 
                 <ModalLoader/>
-                <ToastCustom/>
+
                 <Row key={nanoid()}>
                     <Alert style={{border: 'none', borderRadius: '12px', textAlign: 'center'}} key={nanoid()}
                            variant={'success'}>

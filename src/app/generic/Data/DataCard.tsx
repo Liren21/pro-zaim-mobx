@@ -8,9 +8,7 @@ import joymney from '../Img/joymney.png'
 import ekapusta from '../Img/ekapusta.png'
 import payps from '../Img/payps.png'
 import nadodengi from '../Img/nadodengi.png'
-import krediska from '../Img/krediska.png'
 import zarplata from '../Img/zarplata.png'
-import fastmoney from '../Img/fastmoney.png'
 import credit7 from '../Img/credit7.png'
 import maxcredit from '../Img/maxcredit.png'
 import limezaim from '../Img/limezaim.png'
@@ -24,7 +22,6 @@ import dengisrazu from '../Img/dengisrazu.jpg'
 import smsfinans from '../Img/smsfinans.jpg'
 import webbank from '../Img/webbank.jpeg'
 import moneza from '../Img/moneza.jpeg'
-import ymnienalichka from '../Img/ymnienalichka.jpeg'
 
 export const data = [
     {
@@ -419,29 +416,6 @@ export const data = [
         ],
     },
     {
-        name: 'БыстроДеньги',
-        img: fastmoney,
-        link: 'https://pxl.leads.su/click/7821907626e7eb2a749699798b6a4680?erid=21jyGZG',
-        min: 1000,
-        descr: [
-            {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
-            },
-            {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
-            },
-            {
-                body: [`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`],
-            },
-        ],
-        rate: [
-            {
-                star: 4.4,
-                feedback: 114,
-            },
-        ],
-    },
-    {
         name: 'Max.Credit',
         img: maxcredit,
         link: 'https://pxl.leads.su/click/29be0e51e40c2206517d170dfd59c596?erid=5UGfMyC4',
@@ -488,29 +462,6 @@ export const data = [
         ],
     },
     {
-        name: 'Умные наличные',
-        img: ymnienalichka,
-        link: 'https://pxl.leads.su/click/3d8df00697af1fc4c47598f4cfced8c6?erid=5UGfMxtQ',
-        min: 3000,
-        descr: [
-            {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 3к руб`],
-            },
-            {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  1%`],
-            },
-            {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Время:</p> до 15 мин`],
-            },
-        ],
-        rate: [
-            {
-                star: 4.9,
-                feedback: 184,
-            },
-        ],
-    },
-    {
         name: 'Смс финанс',
         img: smsfinans,
         link: 'https://pxl.leads.su/click/a7d8a43ad7f7cdcd7090b184113d48e9?erid=21jyGZZ',
@@ -530,29 +481,6 @@ export const data = [
             {
                 star: 4.9,
                 feedback: 124,
-            },
-        ],
-    },
-    {
-        name: 'Krediska',
-        img: krediska,
-        link: 'https://pxl.leads.su/click/e7249b370acb41dbe4253ec3d5827c20?erid=get_it_soon',
-        min: 1000,
-        descr: [
-            {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Сумма:</p> от 1к руб`],
-            },
-            {
-                body: [`<p style="color: rgba(0,0,0,0.5)">Ставка:</p>  от  0%`],
-            },
-            {
-                body: [`<p style="color: rgba(0,0,0,0.5)">1-й займ:</p>   0%`],
-            },
-        ],
-        rate: [
-            {
-                star: 4.9,
-                feedback: 194,
             },
         ],
     },
@@ -620,7 +548,7 @@ export const dataInsideCard = [
                 body: 'Банковская карта, платйжные системы, qiwi кошелек, банковский счет',
             },
             {
-                img: 'Место заключения говора',
+                img: 'Место заключения договора',
                 body: 'Онлайн',
             },
             {
@@ -645,7 +573,7 @@ export const dataInsideCard = [
                 body: 'Требуется',
             },
             {
-                img: 'Подтверждение платйжеспособности',
+                img: 'Подтверждение платежеспособности',
                 body: 'Не требуется',
             },
         ],

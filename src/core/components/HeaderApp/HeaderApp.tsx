@@ -40,7 +40,7 @@ const HeaderApp = observer(() => {
                             </Nav.Link>
                         </Nav>
                     </Nav>
-                    <Navbar.Brand className={'title-right'} href={'#' + routes.HOME}>
+                    <Navbar.Brand  href={'#' + routes.HOME}>
                         <img
                             src={layer}
                             width="30"
@@ -50,10 +50,10 @@ const HeaderApp = observer(() => {
                         />
 
                     </Navbar.Brand>
-                    <Navbar.Brand className={'title-right'} href={'#' + routes.HOME}>
+                    <Navbar.Brand  href={'#' + routes.HOME}>
                         {electivesStore.toastBtn}
                     </Navbar.Brand>
-                    <Navbar.Brand className={'title-right'}>
+                    <Navbar.Brand >
                         <img
                             src={layer}
                             width="30"

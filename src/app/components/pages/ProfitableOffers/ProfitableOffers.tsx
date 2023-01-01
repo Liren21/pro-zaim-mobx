@@ -1,16 +1,11 @@
 import React, {useEffect} from 'react'
 import {observer} from 'mobx-react-lite'
 import './ProfitableOffers.scss'
-
-import {Card} from 'react-bootstrap'
-
-import {nanoid} from 'nanoid'
-
-
-import {bestIdea} from '../../../generic/Data/DataCard'
+import {Alert, Button, Card, Form} from 'react-bootstrap'
 import electivesStore from "../../../lib/store/pages/Electives-store";
 import {AnimationEffect} from "../../../generic/AnimationEffect/AnimationEffect";
-import MsgEmpty from "../../../generic/MsgEmpty/MsgEmpty";
+import {nanoid} from "nanoid";
+
 
 export default observer(() => {
 
@@ -21,21 +16,25 @@ export default observer(() => {
     }, [])
     return (
         <AnimationEffect>
-
-            {
-                bestIdea.length !== 0 ?
-                    <>
-                        {bestIdea.map((data) => (
-                            <Card style={{transform: 'none'}} key={nanoid()}>
-                                <Card.Title>{data.title}</Card.Title>
-                                <Card.Body>{data.body}</Card.Body>
-                                <Card.Img className={'profitable-offers'} src={data.photo}/>
-                            </Card>
-                        ))}
-                    </>
-                    :
-                    <MsgEmpty text={'Пусто 😒'}/>
-            }
+            <Alert style={{border: 'none', borderRadius: '12px', textAlign: 'center'}} key={nanoid()}
+                   variant={'success'}>
+               Здесь вы можете написать свои пожелания что можно добавить/изменить в приложении.
+            </Alert>
+            <br/>
+            <Form>
+              <Card>
+                  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                      <Form.Control aria-valuemin={100} type="email" placeholder="Ваш email"/>
+                  </Form.Group>
+              </Card>
+               <Card>
+                   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                       <Form.Control placeholder="Текст" as="textarea" rows={3}/>
+                   </Form.Group>
+               </Card>
+                <br/>
+                <Button style={{float:"right"}} variant={"primary"}>Отправить</Button>
+            </Form>
         </AnimationEffect>
     )
 })

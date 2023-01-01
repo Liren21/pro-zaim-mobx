@@ -8,6 +8,7 @@ import {data} from '../../../../generic/Data/DataCard'
 import './ResultCard.scss'
 import ModalLoader from '../../../../generic/ModalLoader/ModalLoader'
 import ServiceCard from "../../../../generic/ServiceCard/ServiceCard";
+import {AnimationEffect} from "../../../../generic/AnimationEffect/AnimationEffect";
 
 export default observer(() => {
 
@@ -25,7 +26,9 @@ export default observer(() => {
                         null
                         :
                         <Col key={nanoid()} md={3}>
-                            <ServiceCard data={data} key={nanoid()}/>
+                            <AnimationEffect>
+                                <ServiceCard data={data} key={nanoid()}/>
+                            </AnimationEffect>
                         </Col>
                 ))}
             </Row>

@@ -7,7 +7,9 @@ import {useLocalStorage} from "usehooks-ts";
 import {faHeart} from "@fortawesome/free-solid-svg-icons/faHeart";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+import './HeartCustom.scss'
 const faPropIconFaHeart = faHeart;
+
 interface IServiceCard {
     data: any
 }
@@ -55,12 +57,9 @@ export default observer(({data}: IServiceCard) => {
         <>
 
             {heart ?
-                <FontAwesomeIcon icon={faPropIconFaHeart} onClick={() => deleteArr(data)
-                } className={'heart'} />
-
+                <FontAwesomeIcon icon={faPropIconFaHeart} onClick={() => deleteArr(data)} className={'heart'}/>
                 :
-                <FontAwesomeIcon icon={faPropIconFaHeart} onClick={() => add(data)
-                } className={'heart-off'}/>
+                <FontAwesomeIcon icon={faPropIconFaHeart} onClick={() => add(data)} className={'heart-off'}/>
             }
         </>
     )
