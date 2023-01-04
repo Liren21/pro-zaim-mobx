@@ -17,7 +17,7 @@
 //     const handleShow = () => setShow(true);
 //     const data = [
 //         {
-//             title: '  Выгодные предложения',
+//             title: '  Выгодные Контакты ',
 //             href: '#' + routes.PROFITABLE_OFFERS,
 //             icon: <CashCoin className={'icons'}/>,
 //         },
@@ -27,7 +27,7 @@
 //             icon: <QuestionCircle className={'icons'}/>,
 //         },
 //         // {
-//         //     title: ' Связь с разработчиком',
+//         //     title: ' Контакты с разработчиком',
 //         //     href: '#' + routes.RAPPORT,
 //         //     icon: <EnvelopeCheck className={'icons'}/>,
 //         // },

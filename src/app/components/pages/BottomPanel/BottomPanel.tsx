@@ -1,25 +1,24 @@
 import React from 'react'
 import {observer} from 'mobx-react-lite'
 import './BottomPanel.scss'
-import {Button, Col, Row} from 'react-bootstrap'
 import routes from '../../../lib/routes'
-import {nanoid} from 'nanoid'
-import electivesStore from '../../../lib/store/pages/Electives-store'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHouse} from "@fortawesome/free-solid-svg-icons/faHouse";
 import {faCalculator} from "@fortawesome/free-solid-svg-icons/faCalculator";
 import {faHeart} from "@fortawesome/free-solid-svg-icons/faHeart";
-import {faThumbsUp} from "@fortawesome/free-solid-svg-icons/faThumbsUp";
+import {faComment} from "@fortawesome/free-solid-svg-icons/faComment";
+import CustomBtn from "../../../generic/CustomBtn/CustomBtn";
 
 const faPropIconFaHouse = faHouse;
 const faPropIconOneFaCalculator = faCalculator;
 const faPropIconOneFaHeart = faHeart;
-const faPropIconFaThumbsUp = faThumbsUp;
+const faPropIconFaComment = faComment;
+
 export default observer(() => {
     const btnForm = [
         {
             title: 'Хранилище',
-            icon: <FontAwesomeIcon icon={faPropIconFaHouse} />,
+            icon: <FontAwesomeIcon icon={faPropIconFaHouse}/>,
             href: '#' + routes.HOME,
         },
         {
@@ -29,32 +28,22 @@ export default observer(() => {
         },
         {
             title: 'Избранное',
-            icon: <FontAwesomeIcon icon={faPropIconOneFaHeart} />,
+            icon: <FontAwesomeIcon icon={faPropIconOneFaHeart}/>,
             href: '#' + routes.HEART,
         },
 
         {
-            title: 'Предложения',
-            icon: <FontAwesomeIcon icon={faPropIconFaThumbsUp} />,
+            title: 'Контакты ',
+            icon: <FontAwesomeIcon icon={faPropIconFaComment}/>,
             href: '#' + routes.PROFITABLE_OFFERS,
         },
     ]
     return (
         <div className={'bottom-panel'}>
-            <Row>
-                {btnForm.map((data) => (
-                    <Col key={nanoid()} md={3} sm={3} xs={3}>
-                        <Button
-                            variant={electivesStore.toastBtn == data.title ?"outline-primary":"outline-secondary"}
-                            href={data.href}
-                            style={{fontSize:'1.5rem'}}
-                        >
-                            { data.icon}
-                        </Button>
+            {btnForm.map((data) => (
+                <CustomBtn href={data.href} dataTitle={data.title} text={data.icon}/>
 
-                    </Col>
-                ))}
-            </Row>
+            ))}
         </div>
     )
 })

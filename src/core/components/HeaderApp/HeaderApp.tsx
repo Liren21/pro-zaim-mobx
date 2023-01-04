@@ -33,7 +33,7 @@ const HeaderApp = observer(() => {
                                 className={'header-btn-cprofile-offers'}
                                 href={'#' + routes.PROFITABLE_OFFERS}
                             >
-                               Выгодные предложения
+                              Контакты
                             </Nav.Link>
                             <Nav.Link className={'header-btn-upd-comp'} href={'#' + routes.UPD_COMP}>
                               Что нового
